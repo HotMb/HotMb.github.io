@@ -15,17 +15,16 @@ const projectsData = [
         ],
         image: "./public/img/Mario Java.png",
         demoLink: "#",
-        githubLink: "#"
+        githubLink: "https://github.com/HotMb/Mario-Bros.git"
     },
     {
         id: 2,
         title: "Chicken Crousty - Site Restaurant",
         shortDescription: "Site web avec réservations et commandes en ligne",
-        fullDescription: "Site web complet pour le restaurant Chicken Crousty incluant un système de réservation de tables en ligne, commandes à emporter avec paiement intégré, présentation du menu interactif et gestion des disponibilités en temps réel. Interface moderne et responsive optimisée pour mobile.",
-        technologies: ["React", "Node.js", "Stripe", "MongoDB", "Express"],
+        fullDescription: "Site web complet pour le restaurant Chicken Crousty incluant un système de réservation de tables en ligne, commandes à emporter et à livrer, présentation du menu interactif et gestion des disponibilités en temps réel. Interface moderne et responsive optimisée pour mobile.",
+        technologies: ["React", "Node.js", "MongoDB", "Express"],
         features: [
             "Système de réservation en ligne",
-            "Commandes et paiements intégrés",
             "Menu interactif avec images",
             "Gestion des disponibilités",
             "Interface responsive mobile-first"
@@ -82,7 +81,7 @@ const projectsData = [
             "Navigation smooth scroll"
         ],
         image: "./public/img/portfolio.png",
-        demoLink: "#",
+        demoLink: "hotmb.github.io",
         githubLink: "#"
     },
     {
@@ -98,9 +97,9 @@ const projectsData = [
             "Tests unitaires intégrés",
             "Architecture scalable"
         ],
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400",
+        image: "./public/img/APIR appjs.png",
         demoLink: "#",
-        githubLink: "#"
+        githubLink: "https://github.com/HotMb/API-REST---DEMO.git"
     },
     {
         id: 7,
