@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otmane Mabrouk - Développeur Web Full-Stack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">OM</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">À propos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-avatar">
+                <div class="avatar-placeholder">
+                    <img src="./public/img/HotM.jpg" alt="Otmane Mabrouk" class="avatar-image">
+                </div>
+                <div class="avatar-ring"></div>
+            </div>
+            <h1 class="hero-name">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor" id="cursor">|</span>
+            </h1>
+            <p class="hero-title">Développeur Web Full-Stack</p>
+            <p class="hero-description">Passionné par la création d'applications web modernes et performantes. Actuellement à la recherche d'une alternance sur Lille.</p>
+            <button class="btn btn--primary hero-cta" id="hero-cta">
+                <span>Voir mes projets</span>
+                <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p>Je suis un développeur web passionné, spécialisé dans la création d'applications modernes et performantes. Mon expertise s'étend du développement d'applications mobiles avec intelligence artificielle aux sites web pour restaurants et centres médicaux.</p>
+                    <p>Actuellement à la recherche d'une alternance, je suis prêt à apporter ma motivation et mes compétences techniques diversifiées à une équipe dynamique pour créer des solutions digitales innovantes.</p>
+                </div>
+                <div class="about-info animate-on-scroll">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Localisation</h4>
+                            <p>Lille, France</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💼</div>
+                        <div class="info-content">
+                            <h4>Disponibilité</h4>
+                            <p>Recherche d'alternance</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🌐</div>
+                        <div class="info-content">
+                            <h4>Langues</h4>
+                            <p>Français, Anglais, Arabe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll" data-delay="0">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category animate-on-scroll" data-delay="200">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">⚙️</div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Express</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll" data-delay="400">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🗄️</div>
+                        <h3>Bases de données</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll" data-delay="600">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">🛠️</div>
+                        <h3>Outils & DevOps</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Eclipse IDE</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Mes Projets</h2>
+            <div class="projects-grid">
+                <!-- Jeu Mario Java -->
+                <div class="project-card animate-on-scroll" data-project="0">
+                    <div class="project-image">
+                        <img src="./public/img/Mario Java.png" alt="Jeu Mario Java" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">🎮 Jeu</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Jeu Mario - Java</h3>
+                        <p>Jeu de plateforme classique développé en Java</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-java">Java</span>
+                            <span class="tech-tag tech-ide">Eclipse IDE</span>
+                            <span class="tech-tag tech-ui">Java Swing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chicken Crousty -->
+                <div class="project-card animate-on-scroll" data-project="1">
+                    <div class="project-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1757887377/pplx_project_search_images/0794d804a26d0dd61b7b1d689d50c8c3fd93df92.png" alt="Chicken Crousty Restaurant" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">🍗 Restaurant</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chicken Crousty</h3>
+                        <p>Site web avec réservations et commandes en ligne</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-react">React</span>
+                            <span class="tech-tag tech-node">Node.js</span>
+                            <span class="tech-tag tech-payment">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centre Kinésithérapie -->
+                <div class="project-card animate-on-scroll" data-project="2">
+                    <div class="project-image">
+                        <img src="./public/img/kinesaoufi.png" alt="Centre Kinésithérapie" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">🏥 Médical</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Centre Kinésithérapie</h3>
+                        <p>Plateforme de réservation de créneaux médicaux</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-php">PHP</span>
+                            <span class="tech-tag tech-mysql">MySQL</span>
+                            <span class="tech-tag tech-js">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculateur de Période -->
+                <div class="project-card animate-on-scroll" data-project="3">
+                    <div class="project-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755074889/pplx_project_search_images/cf820f1701a0fed7c22471dad90e4979cdb056dd.png" alt="Calculateur de Période" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">💬 IA Santé</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Calculateur de Période + Chatbot</h3>
+                        <p>App santé féminine avec IA conversationnelle</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-react">React Native</span>
+                            <span class="tech-tag tech-python">Python</span>
+                            <span class="tech-tag tech-ai">TensorFlow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio React -->
+                <div class="project-card animate-on-scroll" data-project="4">
+                    <div class="project-image">
+                        <img src="./public/img/portfolio.png" alt="Portfolio React" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">🌐 Portfolio</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio React Moderne</h3>
+                        <p>Site personnel avec animations avancées</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-react">React</span>
+                            <span class="tech-tag tech-animation">Framer Motion</span>
+                            <span class="tech-tag tech-css">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API REST -->
+                <div class="project-card animate-on-scroll" data-project="5">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400" alt="API REST" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">⚙️ Backend</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>API REST Sécurisée</h3>
+                        <p>Backend robuste avec authentification JWT</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-node">Node.js</span>
+                            <span class="tech-tag tech-jwt">JWT</span>
+                            <span class="tech-tag tech-mongo">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Tatouages -->
+                <div class="project-card animate-on-scroll" data-project="6">
+                    <div class="project-image">
+                        <img src="./public/img/tattoodjoecom.png" alt="E-commerce Tatouages Éphémères" class="project-img">
+                        <div class="project-overlay">
+                            <span class="project-type">🛍️ E-commerce</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tattoo Djo - E-commerce</h3>
+                        <p>Boutique en ligne moderne de tatouages éphémères</p>
+                        <div class="project-tech">
+                            <span class="tech-tag tech-react">React</span>
+                            <span class="tech-tag tech-vite">Vite</span>
+                            <span class="tech-tag tech-strapi">Strapi</span>
+                            <span class="tech-tag tech-animation">Framer Motion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contactez-moi</h2>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>otmanmabrouk01@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+33 6 62 78 83 42</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Lille, France</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Otmane Mabrouk. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal hidden" id="project-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
