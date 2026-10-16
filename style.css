@@ -1850,3 +1850,41 @@ html{scroll-behavior:auto}
 html.has-js .animate-on-scroll{opacity:1!important;transform:none!important}
 .project-card:hover,.contact-item:hover{transform:none}
 }
+
+/* Motion and small-screen polish — keep the original animation language. */
+html.has-js .animate-on-scroll {
+  transition-property: opacity, transform;
+  transition-duration: 680ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-background {
+  background-image: linear-gradient(135deg, var(--color-slate-900) 0%, #17626d 50%, var(--color-slate-900) 100%);
+}
+.hero-title { color: #f5fbfa; }
+.hero-description,
+.scroll-indicator { color: rgba(255, 255, 255, 0.84); }
+.scroll-arrow { border-color: rgba(255, 255, 255, 0.84); }
+.typing-text { border-right-color: rgba(255, 255, 255, 0.94); }
+.cursor { color: rgba(255, 255, 255, 0.94); }
+.hero-cta { background-color: #17626d; }
+.hero-cta.btn--primary:hover { background-color: #155660; }
+.hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: calc(84px + env(safe-area-inset-top));
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+  .hero-description { font-size: clamp(16px, 4vw, 18px); line-height: 1.6; }
+  html.has-js .animate-on-scroll {
+    transform: translateY(18px);
+    transition-duration: 600ms;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .project-card:hover,
+  .contact-item:hover,
+  .logo-text:hover { transform: none; }
+  .project-card:hover .project-img { transform: none; }
+}
