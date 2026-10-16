@@ -595,6 +595,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 .project-symbol { width: 70px; height: 70px; border: 1px solid rgba(17, 23, 20, .22); border-radius: 18px; }
 .symbol-clinic { color: #315843; background: rgba(255, 255, 255, .38); }
+.symbol-api { color: #315843; background: rgba(255, 255, 255, .38); font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: -.08em; }
 .symbol-clinic span { position: relative; display: block; width: 34px; height: 8px; border-radius: 4px; background: currentColor; }
 .symbol-clinic span::after { position: absolute; inset: -13px 13px; border-radius: 4px; background: currentColor; content: ""; }
 .symbol-calendar { grid-template-columns: repeat(2, 10px); gap: 6px; align-content: center; background: rgba(255, 255, 255, .4); }
