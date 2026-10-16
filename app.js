@@ -1,9 +1,9 @@
 const projectsData = [
     {
         "id": "centre-saoufi-rdv",
-        "title": "Gestion interne des rendez-vous — Centre Saoufi",
-        "type": "Projet réalisé en stage",
-        "shortDescription": "Contribution à une application interne de gestion des rendez-vous pour un centre de rééducation.",
+        "title": "Centre de kinésithérapie Saoufi — gestion des rendez-vous",
+        "type": "Stage · application métier",
+        "shortDescription": "Application métier à laquelle j’ai contribué pendant mon stage, dédiée à l’organisation interne des rendez-vous de l’équipe.",
         "fullDescription": "Pendant mon stage au Centre Saoufi, j’ai contribué à une application interne destinée à organiser les rendez-vous et les tâches du personnel. Le projet s’appuie sur une interface React et une API Express avec Prisma et PostgreSQL. L’application reste privée et n’utilise aucune démonstration de données patients.",
         "technologies": [
             "React",
@@ -22,26 +22,27 @@ const projectsData = [
         "demoStatus": "Application interne · code non public"
     },
     {
-        "id": "guardian-autopilot",
-        "title": "Guardian Autopilot",
-        "type": "Outil développeur",
-        "shortDescription": "Un outil local qui inspecte un dépôt et prépare un plan de nettoyage contrôlé.",
-        "fullDescription": "Prototype local-first pour comprendre les fichiers d’un dépôt avant de les toucher : inventaire et empreintes SHA-256, détection de doublons, résolution des références entre fichiers, puis plan de nettoyage en lecture seule. Les essais d’automatisation se font dans un worktree Git isolé, avec vérifications requises.",
+        "id": "dolce-pizz",
+        "title": "Dolce Pizz’ — site de pizzeria",
+        "type": "Site vitrine et commande en ligne",
+        "shortDescription": "Un site responsive avec une carte interactive et un parcours de commande accessible en démo.",
+        "fullDescription": "Site web de pizzeria construit avec Next.js, React et Tailwind CSS, déployé sur Cloudflare Workers. La démo publique permet d’explorer la carte et le parcours de commande. Le code source n’est pas encore publié sur GitHub.",
         "technologies": [
-            "Node.js",
-            "TypeScript",
-            "Git",
-            "MCP"
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "Cloudflare Workers"
         ],
         "features": [
-            "Analyse des fichiers et de leurs références",
-            "Plan de nettoyage consultable avant action",
-            "Expérimentation dans un worktree isolé",
-            "Outil en bêta, sans démo web publique"
+            "Interface responsive pour consulter la carte",
+            "Parcours de commande disponible sur la démo publique",
+            "Capture issue de la démo en ligne",
+            "Code source GitHub à publier"
         ],
-        "githubLink": "https://github.com/HotMb/guardian-autopilot",
-        "demoUrl": "",
-        "demoStatus": "Outil local en bêta · pas de démo web publique"
+        "demoUrl": "https://dolce-pizz-demo.dolcepizza.workers.dev/",
+        "sourceStatus": "Code source GitHub à publier",
+        "demoStatus": "Démo publique accessible",
+        "imageUrl": "./public/img/dolce-pizz-demo.jpg"
     },
     {
         "id": "magensy",
@@ -82,9 +83,9 @@ const projectsData = [
             "Données fictives clairement identifiées",
             "Prototype d’apprentissage, sans backend"
         ],
-        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/projects/nimbus",
+        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/main/projects/nimbus",
         "demoUrl": "",
-        "demoStatus": "Prototype statique · code dans la branche de revue"
+        "demoStatus": "Prototype statique · code sur la branche principale"
     },
     {
         "id": "meteo-app",
@@ -396,10 +397,14 @@ function openProjectModal(projectIndex, trigger) {
         : '<p class="project-demo-note">' + escapeHtml(project.demoStatus) + '</p>';
     const sourceLink = project.githubLink
         ? '<a href="' + escapeHtml(project.githubLink) + '" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le code <span aria-hidden="true">↗</span></a>'
-        : '';
+        : (project.sourceStatus ? '<p class="project-demo-note">' + escapeHtml(project.sourceStatus) + '</p>' : '');
+    const modalImage = project.imageUrl
+        ? '<img class="modal-project-img" src="' + escapeHtml(project.imageUrl) + '" alt="">'
+        : '<div class="modal-project-art"><span>' + escapeHtml(project.type) + '</span><strong>' + escapeHtml(project.title) + '</strong><small>' + escapeHtml(project.technologies.slice(0, 3).join(' · ')) + '</small></div>';
     modalBody.innerHTML = [
         '<div class="modal-project"><div class="modal-project-image" aria-hidden="true">',
-        '<div class="modal-project-art"><span>' + escapeHtml(project.type) + '</span><strong>' + escapeHtml(project.title) + '</strong><small>' + escapeHtml(project.technologies.slice(0, 3).join(' · ')) + '</small></div></div>',
+        modalImage,
+        '</div>',
         '<div class="modal-project-content"><p class="modal-project-kicker">' + escapeHtml(project.type) + '</p>',
         '<h2 id="modal-project-title">' + escapeHtml(project.title) + '</h2><p class="project-full-description">' + escapeHtml(project.fullDescription) + '</p>',
         '<div class="project-technologies"><h4>Technologies</h4><div class="tech-tags">' + project.technologies.map(t => '<span class="tech-tag">' + escapeHtml(t) + '</span>').join('') + '</div></div>',
