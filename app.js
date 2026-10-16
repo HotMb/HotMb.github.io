@@ -233,25 +233,47 @@ function getDOMElements() {
     console.log('DOM elements retrieved');
 }
 
-// Scroll-reveal observer. The page stays readable when this API is unavailable.
+// Scroll reveals use IntersectionObserver with a scroll-position fallback.
 let observer = null;
-if ('IntersectionObserver' in window) {
-    observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const delay = Number(entry.target.dataset.delay || 0);
-                window.setTimeout(() => entry.target.classList.add('animate'), delay);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-}
+let animationElements = [];
+let animationFrame = 0;
 
 function initializeAnimations() {
-    document.querySelectorAll('.animate-on-scroll').forEach(element => {
-        if (observer) observer.observe(element);
-        else element.classList.add('animate');
-    });
+    animationElements = [...document.querySelectorAll('.animate-on-scroll')];
+
+    const reveal = element => {
+        if (element.classList.contains('animate')) return;
+        const delay = Number(element.dataset.delay || 0);
+        window.setTimeout(() => element.classList.add('animate'), delay);
+        observer?.unobserve(element);
+    };
+
+    const revealVisible = () => {
+        animationFrame = 0;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        animationElements.forEach(element => {
+            const bounds = element.getBoundingClientRect();
+            if (bounds.top < viewportHeight * 0.92 && bounds.bottom > 24) reveal(element);
+        });
+    };
+
+    if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) reveal(entry.target);
+            });
+        }, { threshold: 0.01, rootMargin: '0px 0px -4% 0px' });
+        animationElements.forEach(element => observer.observe(element));
+    }
+
+    const scheduleRevealCheck = () => {
+        if (!animationFrame) animationFrame = window.requestAnimationFrame(revealVisible);
+    };
+    window.addEventListener('scroll', scheduleRevealCheck, { passive: true });
+    window.addEventListener('resize', scheduleRevealCheck, { passive: true });
+    window.addEventListener('load', scheduleRevealCheck, { once: true });
+    scheduleRevealCheck();
+    window.setTimeout(scheduleRevealCheck, 80);
 }
 
 function setMenuOpen(isOpen) {
@@ -322,11 +344,6 @@ function initializeNavigation() {
 function initializeTypingEffect() {
     if (!typingText || !cursor) return;
     const name = 'Otmane Mabrouk';
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        typingText.textContent = name;
-        cursor.hidden = true;
-        return;
-    }
     let index = 0;
     typingText.textContent = '';
     const typeNext = () => {
@@ -342,7 +359,6 @@ function initializeTypingEffect() {
 
 // Scroll effects
 function initializeScrollEffects() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let ticking = false;
     const updateParallax = () => {
         const background = document.querySelector('.hero-background');
