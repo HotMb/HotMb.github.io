@@ -22,34 +22,11 @@ const projectsData = [
         "demoStatus": "Outil local en bêta · pas de démo web publique"
     },
     {
-        "id": "planning-efficom",
-        "title": "Planning Efficom",
-        "type": "Application métier",
-        "shortDescription": "Un planning de cours avec droits par rôle et contrôle des conflits de salles, classes et intervenants.",
-        "fullDescription": "Application de planning développée avec React et Django REST. Les vues dépendent du rôle étudiant ou intervenant, et l’API refuse les créneaux qui se chevauchent pour une salle, une classe ou un intervenant. Le lancement local nécessite MySQL.",
-        "technologies": [
-            "React",
-            "Django REST",
-            "Python",
-            "MySQL",
-            "JWT"
-        ],
-        "features": [
-            "Accès de consultation selon le rôle",
-            "Validation des conflits côté API",
-            "Réponse HTTP 409 en cas de conflit",
-            "Dépend de MySQL pour un lancement local"
-        ],
-        "githubLink": "https://github.com/HotMb/RATTRAPAGE_BLOC2_MABROUK_OTMANE",
-        "demoUrl": "",
-        "demoStatus": "Dépôt public · démo à déployer"
-    },
-    {
         "id": "magensy",
         "title": "Magensy",
         "type": "Site vitrine",
-        "shortDescription": "Un site d’entreprise avec Next.js, TypeScript et Tailwind, configuré pour une sortie statique.",
-        "fullDescription": "Site de présentation des services de l’entreprise, réalisé avec Next.js, TypeScript et Tailwind CSS. L’export statique et le build ont été validés dans une branche de revue. La publication publique reste à activer et le formulaire doit être raccordé à un service réel.",
+        "shortDescription": "Un site de présentation d’entreprise réalisé avec Next.js, TypeScript et Tailwind, préparé pour un hébergement statique.",
+        "fullDescription": "Site de présentation des services de l’entreprise, construit avec Next.js, TypeScript et Tailwind CSS. Le build de production passe dans la branche de revue. Le déploiement public et le raccordement du formulaire restent à faire.",
         "technologies": [
             "Next.js",
             "TypeScript",
@@ -59,12 +36,35 @@ const projectsData = [
         "features": [
             "Pages de présentation des services",
             "Export statique préparé pour GitHub Pages",
-            "Build de revue validé",
-            "Formulaire à raccorder avant mise en production"
+            "Build de production validé dans la branche de revue",
+            "Formulaire à connecter avant publication"
         ],
         "githubLink": "https://github.com/HotMb/Magensy",
         "demoUrl": "",
-        "demoStatus": "Build validé · publication en attente de revue"
+        "demoStatus": "Build validé · publication en attente"
+    },
+    {
+        "id": "planning-efficom",
+        "title": "Planning Efficom",
+        "type": "Application académique",
+        "shortDescription": "Une application de planning de cours avec accès par rôle et détection des conflits de salle, de classe et d’intervenant.",
+        "fullDescription": "Application web académique développée avec React et Django REST. Les administrateurs gèrent les cours, tandis que les étudiants et intervenants consultent leur planning. L’API refuse un créneau qui chevauche une salle, une classe ou un intervenant déjà occupé, avec une réponse HTTP 409. Le lancement local nécessite MySQL.",
+        "technologies": [
+            "React",
+            "Django REST",
+            "Python",
+            "MySQL",
+            "JWT"
+        ],
+        "features": [
+            "Planning adapté au profil connecté",
+            "Gestion par l’administrateur et consultation par rôle",
+            "Détection des conflits côté API et réponse 409",
+            "Tests backend et frontend documentés dans le dépôt"
+        ],
+        "githubLink": "https://github.com/HotMb/RATTRAPAGE_BLOC2_MABROUK_OTMANE",
+        "demoUrl": "",
+        "demoStatus": "Projet académique · démo non hébergée"
     },
     {
         "id": "meteo-app",
@@ -111,25 +111,77 @@ const projectsData = [
         "demoStatus": "Prototype backend · démo locale uniquement"
     },
     {
+        "id": "tasks-api",
+        "title": "API de gestion de tâches",
+        "type": "API pédagogique",
+        "shortDescription": "Une API Flask avec routes de santé, de consultation, de création et de suppression de tâches.",
+        "fullDescription": "API REST pédagogique construite avec Flask. Elle expose un contrôle de santé, la lecture et la création de tâches, ainsi que leur suppression. Le stockage est en mémoire : les tâches disparaissent à l’arrêt du serveur, et le projet n’inclut ni authentification ni base de données.",
+        "technologies": [
+            "Python",
+            "Flask",
+            "API REST",
+            "pytest"
+        ],
+        "features": [
+            "Routes de santé et de gestion des tâches",
+            "Création et suppression par requête HTTP",
+            "État en mémoire, sans persistance",
+            "Tests et contrat HTTP alignés dans la branche de revue"
+        ],
+        "githubLink": "https://github.com/HotMb/devops-tasks-api",
+        "demoUrl": "",
+        "demoStatus": "API locale · stockage en mémoire"
+    },
+    {
         "id": "api-rest-demo",
         "title": "Simulateur d’API REST",
         "type": "Prototype frontend",
-        "shortDescription": "Une interface pédagogique qui simule des requêtes, des réponses JSON et une connexion dans le navigateur.",
-        "fullDescription": "Prototype statique en HTML, CSS et JavaScript pour visualiser le parcours d’une API REST. La connexion, les réponses et le jeton sont simulés côté navigateur : le projet ne fournit ni serveur, ni base de données, ni authentification réelle.",
-        "technologies": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ],
+        "shortDescription": "Une interface pédagogique qui met en scène des requêtes, des réponses JSON et une connexion simulée dans le navigateur.",
+        "fullDescription": "Prototype statique en HTML, CSS et JavaScript pour visualiser un parcours d’API REST. La connexion, les réponses et le jeton sont simulés côté navigateur : le projet ne fournit ni serveur, ni base de données, ni authentification réelle.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
         "features": [
             "Parcours de requêtes et réponses JSON",
             "Simulation locale d’une connexion et d’un jeton",
             "Aucun backend ou stockage de données",
-            "Adapté à une démo statique après publication"
+            "Publication statique possible après activation de Pages"
         ],
         "githubLink": "https://github.com/HotMb/API-REST---DEMO",
         "demoUrl": "",
-        "demoStatus": "Prototype statique · publication à activer"
+        "demoStatus": "Prototype statique · API non réelle"
+    },
+    {
+        "id": "uno-card-game",
+        "title": "Jeu de cartes Python",
+        "type": "Projet académique · Python",
+        "shortDescription": "Un mini-projet structuré autour des objets Carte et Paquet, avec un programme de démonstration et des tests.",
+        "fullDescription": "Projet Python organisé autour des classes Carte et Paquet, avec un point d’entrée de démonstration et une suite de tests unitaires, d’intégration et de bout en bout.",
+        "technologies": ["Python", "Programmation orientée objet", "pytest"],
+        "features": [
+            "Classes séparées pour les cartes et le paquet",
+            "Programme de démonstration",
+            "Tests unitaires, intégration et bout en bout",
+            "Tests corrigés dans la branche de revue"
+        ],
+        "githubLink": "https://github.com/HotMb/UNO-otmane",
+        "demoUrl": "",
+        "demoStatus": "Projet Python · code source public"
+    },
+    {
+        "id": "binary-structure",
+        "title": "Structure CodeBinaire",
+        "type": "Projet académique · Python",
+        "shortDescription": "Une structure de données pour manipuler une séquence de bits et empêcher qu’elle devienne vide.",
+        "fullDescription": "Exercice Python qui modélise des bits avec une énumération et fournit une classe CodeBinaire avec ajout, concaténation, accès, découpe, modification et suppression. Une exception empêche de vider entièrement la séquence.",
+        "technologies": ["Python", "Enum", "pytest"],
+        "features": [
+            "Manipulation de séquences de bits",
+            "Indexation, découpe et concaténation",
+            "Exception dédiée pour préserver au moins un bit",
+            "Imports et tests corrigés dans la branche de revue"
+        ],
+        "githubLink": "https://github.com/HotMb/TP-CodeBinaire",
+        "demoUrl": "",
+        "demoStatus": "Exercice Python · code source public"
     }
 ];
 
@@ -838,4 +890,5 @@ function addHoverEffects() {
 
     console.log('Hover effects initialized');
 }
+
 

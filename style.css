@@ -1830,7 +1830,7 @@ section {
     background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
     background-size: 18px 18px; opacity: .48;
 }
-.project-visual > .visual-label, .project-visual > .visual-caption, .project-visual > strong, .project-visual > .visual-calendar, .project-visual > .visual-browser, .project-visual > .visual-flow, .project-visual > .visual-code { position: relative; z-index: 1; }
+.project-visual > .visual-label, .project-visual > .visual-caption, .project-visual > strong, .project-visual > .visual-calendar, .project-visual > .visual-browser, .project-visual > .visual-flow, .project-visual > .visual-code, .project-visual > .visual-task-flow, .project-visual > .visual-cards, .project-visual > .visual-bits { position: relative; z-index: 1; }
 .visual-label { align-self: flex-start; color: rgba(255,255,255,.72); font-size: 10px; letter-spacing: .1em; }
 .visual-caption { color: rgba(255,255,255,.78); font-size: 12px; }
 .visual-guardian { background: linear-gradient(135deg, #13343b, #21808d); }
@@ -1879,6 +1879,18 @@ section {
 .visual-code i { color: #a8e4cf; font-style: normal; }
 .visual-code b { color: #f4d68b; font-weight: 400; }
 .visual-code span { color: rgba(255,255,255,.65); }
+.visual-task-api { background: linear-gradient(135deg, #24384b, #497c90); }
+.visual-task-flow { display: flex; align-items: center; gap: 8px; }
+.visual-task-flow i { padding: 9px 10px; border: 1px solid rgba(255,255,255,.4); border-radius: 6px; background: rgba(12,16,20,.28); font-size: 10px; font-style: normal; }
+.visual-task-flow b { color: #b9e6c4; }
+.visual-uno { background: linear-gradient(135deg, #612d40, #a95851); }
+.visual-cards { display: flex; gap: 10px; transform: rotate(-5deg); }
+.visual-cards span { display: grid; width: 44px; height: 64px; place-items: center; border: 1px solid rgba(255,255,255,.7); border-radius: 7px; background: #f6eee2; color: #873644; font-size: 20px; font-weight: 700; box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+.visual-cards span:nth-child(2) { transform: translateY(-8px) rotate(8deg); color: #267351; }
+.visual-cards span:nth-child(3) { transform: rotate(11deg); color: #385a93; }
+.visual-binary { background: linear-gradient(135deg, #283c4e, #426d76); }
+.visual-bits { display: flex; gap: 6px; }
+.visual-bits i { padding: 10px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 5px; background: rgba(12,16,20,.3); color: #c8f0d0; font: 600 15px/1 monospace; font-style: normal; }
 .modal-project-art {
     display: flex; min-height: 220px; align-items: center; justify-content: center;
     flex-direction: column; gap: 14px; padding: 24px; border-radius: var(--radius-lg);
@@ -1908,3 +1920,4 @@ section {
     html.has-js .animate-on-scroll,
     html.has-js .animate-on-scroll.animate { opacity: 1; transform: none; }
 }
+
