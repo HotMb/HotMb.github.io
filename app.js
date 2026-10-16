@@ -1,9 +1,31 @@
 const projectsData = [
     {
+        "id": "centre-saoufi-rdv",
+        "title": "Gestion interne des rendez-vous — Centre Saoufi",
+        "type": "Projet réalisé en stage",
+        "shortDescription": "Contribution à une application interne de gestion des rendez-vous pour un centre de rééducation.",
+        "fullDescription": "Pendant mon stage au Centre Saoufi, j’ai contribué à une application interne destinée à organiser les rendez-vous et les tâches du personnel. Le projet s’appuie sur une interface React et une API Express avec Prisma et PostgreSQL. L’application reste privée et n’utilise aucune démonstration de données patients.",
+        "technologies": [
+            "React",
+            "TypeScript",
+            "Express",
+            "Prisma",
+            "PostgreSQL"
+        ],
+        "features": [
+            "Contribution à une application métier utilisée en interne",
+            "Organisation de la gestion des rendez-vous",
+            "Interface web et API connectée à une base relationnelle",
+            "Code et données de démonstration non publics"
+        ],
+        "demoUrl": "",
+        "demoStatus": "Application interne · code non public"
+    },
+    {
         "id": "guardian-autopilot",
         "title": "Guardian Autopilot",
         "type": "Outil développeur",
-        "shortDescription": "Un outil local qui inspecte un dépôt, repère les doublons et prépare un plan de nettoyage contrôlé.",
+        "shortDescription": "Un outil local qui inspecte un dépôt et prépare un plan de nettoyage contrôlé.",
         "fullDescription": "Prototype local-first pour comprendre les fichiers d’un dépôt avant de les toucher : inventaire et empreintes SHA-256, détection de doublons, résolution des références entre fichiers, puis plan de nettoyage en lecture seule. Les essais d’automatisation se font dans un worktree Git isolé, avec vérifications requises.",
         "technologies": [
             "Node.js",
@@ -12,10 +34,10 @@ const projectsData = [
             "MCP"
         ],
         "features": [
-            "Analyse des fichiers et des références",
+            "Analyse des fichiers et de leurs références",
             "Plan de nettoyage consultable avant action",
             "Expérimentation dans un worktree isolé",
-            "Prototype en bêta, sans démo web publique"
+            "Outil en bêta, sans démo web publique"
         ],
         "githubLink": "https://github.com/HotMb/guardian-autopilot",
         "demoUrl": "",
@@ -25,7 +47,7 @@ const projectsData = [
         "id": "magensy",
         "title": "Magensy",
         "type": "Site vitrine",
-        "shortDescription": "Un site de présentation d’entreprise réalisé avec Next.js, TypeScript et Tailwind, préparé pour un hébergement statique.",
+        "shortDescription": "Un site de présentation d’entreprise construit avec Next.js, TypeScript et Tailwind CSS.",
         "fullDescription": "Site de présentation des services de l’entreprise, construit avec Next.js, TypeScript et Tailwind CSS. Le build de production passe dans la branche de revue. Le déploiement public et le raccordement du formulaire restent à faire.",
         "technologies": [
             "Next.js",
@@ -44,27 +66,25 @@ const projectsData = [
         "demoStatus": "Build validé · publication en attente"
     },
     {
-        "id": "planning-efficom",
-        "title": "Planning Efficom",
-        "type": "Application académique",
-        "shortDescription": "Une application de planning de cours avec accès par rôle et détection des conflits de salle, de classe et d’intervenant.",
-        "fullDescription": "Application web académique développée avec React et Django REST. Les administrateurs gèrent les cours, tandis que les étudiants et intervenants consultent leur planning. L’API refuse un créneau qui chevauche une salle, une classe ou un intervenant déjà occupé, avec une réponse HTTP 409. Le lancement local nécessite MySQL.",
+        "id": "nimbus",
+        "title": "Nimbus — tableau de bord",
+        "type": "Prototype d’interface · apprentissage Tailwind",
+        "shortDescription": "Un prototype responsive pour pratiquer Tailwind CSS et les filtres d’interface.",
+        "fullDescription": "Prototype statique créé pour commencer à pratiquer Tailwind CSS : mise en page responsive, menu mobile, recherche et filtres côté navigateur. Les projets, chiffres et pourcentages affichés sont fictifs. Aucun backend ni service externe n’est connecté.",
         "technologies": [
-            "React",
-            "Django REST",
-            "Python",
-            "MySQL",
-            "JWT"
+            "HTML",
+            "Tailwind CSS v4",
+            "JavaScript"
         ],
         "features": [
-            "Planning adapté au profil connecté",
-            "Gestion par l’administrateur et consultation par rôle",
-            "Détection des conflits côté API et réponse 409",
-            "Tests backend et frontend documentés dans le dépôt"
+            "Mise en page responsive avec les utilitaires Tailwind",
+            "Navigation mobile et filtres interactifs",
+            "Données fictives clairement identifiées",
+            "Prototype d’apprentissage, sans backend"
         ],
-        "githubLink": "https://github.com/HotMb/RATTRAPAGE_BLOC2_MABROUK_OTMANE",
+        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/site/projects/nimbus",
         "demoUrl": "",
-        "demoStatus": "Projet académique · démo non hébergée"
+        "demoStatus": "Prototype statique · code dans la branche de revue"
     },
     {
         "id": "meteo-app",
@@ -109,79 +129,6 @@ const projectsData = [
         "githubLink": "https://github.com/HotMb/webhook-payment",
         "demoUrl": "",
         "demoStatus": "Prototype backend · démo locale uniquement"
-    },
-    {
-        "id": "tasks-api",
-        "title": "API de gestion de tâches",
-        "type": "API pédagogique",
-        "shortDescription": "Une API Flask avec routes de santé, de consultation, de création et de suppression de tâches.",
-        "fullDescription": "API REST pédagogique construite avec Flask. Elle expose un contrôle de santé, la lecture et la création de tâches, ainsi que leur suppression. Le stockage est en mémoire : les tâches disparaissent à l’arrêt du serveur, et le projet n’inclut ni authentification ni base de données.",
-        "technologies": [
-            "Python",
-            "Flask",
-            "API REST",
-            "pytest"
-        ],
-        "features": [
-            "Routes de santé et de gestion des tâches",
-            "Création et suppression par requête HTTP",
-            "État en mémoire, sans persistance",
-            "Tests et contrat HTTP alignés dans la branche de revue"
-        ],
-        "githubLink": "https://github.com/HotMb/devops-tasks-api",
-        "demoUrl": "",
-        "demoStatus": "API locale · stockage en mémoire"
-    },
-    {
-        "id": "api-rest-demo",
-        "title": "Simulateur d’API REST",
-        "type": "Prototype frontend",
-        "shortDescription": "Une interface pédagogique qui met en scène des requêtes, des réponses JSON et une connexion simulée dans le navigateur.",
-        "fullDescription": "Prototype statique en HTML, CSS et JavaScript pour visualiser un parcours d’API REST. La connexion, les réponses et le jeton sont simulés côté navigateur : le projet ne fournit ni serveur, ni base de données, ni authentification réelle.",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "features": [
-            "Parcours de requêtes et réponses JSON",
-            "Simulation locale d’une connexion et d’un jeton",
-            "Aucun backend ou stockage de données",
-            "Publication statique possible après activation de Pages"
-        ],
-        "githubLink": "https://github.com/HotMb/API-REST---DEMO",
-        "demoUrl": "",
-        "demoStatus": "Prototype statique · API non réelle"
-    },
-    {
-        "id": "uno-card-game",
-        "title": "Jeu de cartes Python",
-        "type": "Projet académique · Python",
-        "shortDescription": "Un mini-projet structuré autour des objets Carte et Paquet, avec un programme de démonstration et des tests.",
-        "fullDescription": "Projet Python organisé autour des classes Carte et Paquet, avec un point d’entrée de démonstration et une suite de tests unitaires, d’intégration et de bout en bout.",
-        "technologies": ["Python", "Programmation orientée objet", "pytest"],
-        "features": [
-            "Classes séparées pour les cartes et le paquet",
-            "Programme de démonstration",
-            "Tests unitaires, intégration et bout en bout",
-            "Tests corrigés dans la branche de revue"
-        ],
-        "githubLink": "https://github.com/HotMb/UNO-otmane",
-        "demoUrl": "",
-        "demoStatus": "Projet Python · code source public"
-    },
-    {
-        "id": "binary-structure",
-        "title": "Structure CodeBinaire",
-        "type": "Projet académique · Python",
-        "shortDescription": "Une structure de données pour manipuler une séquence de bits et empêcher qu’elle devienne vide.",
-        "fullDescription": "Exercice Python qui modélise des bits avec une énumération et fournit une classe CodeBinaire avec ajout, concaténation, accès, découpe, modification et suppression. Une exception empêche de vider entièrement la séquence.",
-        "technologies": ["Python", "Enum", "pytest"],
-        "features": [
-            "Manipulation de séquences de bits",
-            "Indexation, découpe et concaténation",
-            "Exception dédiée pour préserver au moins un bit",
-            "Imports et tests corrigés dans la branche de revue"
-        ],
-        "githubLink": "https://github.com/HotMb/TP-CodeBinaire",
-        "demoUrl": "",
-        "demoStatus": "Exercice Python · code source public"
     }
 ];
 
@@ -195,7 +142,7 @@ document.documentElement.classList.add('has-js');
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing...');
+
     const year = document.getElementById('current-year');
     if (year) year.textContent = String(new Date().getFullYear());
     
@@ -210,9 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSkillsBars();
     initializeProjects();
     initializeScrollIndicator();
-    addHoverEffects();
-    
-    console.log('All initialization complete');
+
 });
 
 // Get all DOM elements
@@ -229,51 +174,44 @@ function getDOMElements() {
     modalOverlay = document.getElementById('modal-overlay');
     modalClose = document.getElementById('modal-close');
     modalBody = document.getElementById('modal-body');
-    
-    console.log('DOM elements retrieved');
+
 }
 
-// Scroll reveals use IntersectionObserver with a scroll-position fallback.
+// Keep the original scroll reveal while limiting fallback work to browsers without IntersectionObserver.
 let observer = null;
-let animationElements = [];
 let animationFrame = 0;
-
 function initializeAnimations() {
-    animationElements = [...document.querySelectorAll('.animate-on-scroll')];
-
+    const elements = [...document.querySelectorAll('.animate-on-scroll')];
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        elements.forEach(element => element.classList.add('animate'));
+        return;
+    }
+    const pending = new Set(elements);
     const reveal = element => {
-        if (element.classList.contains('animate')) return;
-        const delay = Number(element.dataset.delay || 0);
-        window.setTimeout(() => element.classList.add('animate'), delay);
+        if (!pending.delete(element)) return;
+        window.setTimeout(() => element.classList.add('animate'), Number(element.dataset.delay || 0));
         observer?.unobserve(element);
     };
-
+    if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (entry.isIntersecting) reveal(entry.target);
+        }), { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+        elements.forEach(element => observer.observe(element));
+        return;
+    }
     const revealVisible = () => {
         animationFrame = 0;
-        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        animationElements.forEach(element => {
+        const height = window.innerHeight || document.documentElement.clientHeight;
+        [...pending].forEach(element => {
             const bounds = element.getBoundingClientRect();
-            if (bounds.top < viewportHeight * 0.92 && bounds.bottom > 24) reveal(element);
+            if (bounds.top < height * 0.92 && bounds.bottom > 24) reveal(element);
         });
     };
-
-    if ('IntersectionObserver' in window) {
-        observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) reveal(entry.target);
-            });
-        }, { threshold: 0.01, rootMargin: '0px 0px -4% 0px' });
-        animationElements.forEach(element => observer.observe(element));
-    }
-
-    const scheduleRevealCheck = () => {
-        if (!animationFrame) animationFrame = window.requestAnimationFrame(revealVisible);
-    };
-    window.addEventListener('scroll', scheduleRevealCheck, { passive: true });
-    window.addEventListener('resize', scheduleRevealCheck, { passive: true });
-    window.addEventListener('load', scheduleRevealCheck, { once: true });
-    scheduleRevealCheck();
-    window.setTimeout(scheduleRevealCheck, 80);
+    const schedule = () => { if (!animationFrame) animationFrame = window.requestAnimationFrame(revealVisible); };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    window.addEventListener('load', schedule, { once: true });
+    schedule();
 }
 
 function setMenuOpen(isOpen) {
@@ -340,72 +278,51 @@ function initializeNavigation() {
     updateNavigation();
 }
 
-// Typing effect for hero section
+// Original typing animation, with a static fallback for reduced-motion preferences.
 function initializeTypingEffect() {
     if (!typingText || !cursor) return;
     const name = 'Otmane Mabrouk';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typingText.textContent = name;
+        cursor.hidden = true;
+        return;
+    }
     let index = 0;
     typingText.textContent = '';
     const typeNext = () => {
         if (index < name.length) {
             typingText.textContent += name.charAt(index++);
             window.setTimeout(typeNext, 115);
-        } else {
-            window.setTimeout(() => { cursor.hidden = true; }, 700);
-        }
+        } else window.setTimeout(() => { cursor.hidden = true; }, 700);
     };
     window.setTimeout(typeNext, 350);
 }
 
-// Scroll effects
+// Keep the original hero parallax, throttled to one animation frame.
 function initializeScrollEffects() {
+    const background = document.querySelector('.hero-background');
+    if (!background || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let ticking = false;
-    const updateParallax = () => {
-        const background = document.querySelector('.hero-background');
-        if (background) background.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+    const update = () => {
+        if (window.scrollY < window.innerHeight) background.style.transform = 'translate3d(0,' + (window.scrollY * 0.22) + 'px,0)';
         ticking = false;
     };
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
+        if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
     }, { passive: true });
 }
 
-// Hero CTA and scroll indicator functionality
+// Hero CTA and scroll indicator functionality.
 function initializeScrollIndicator() {
-    if (heroCta) {
-        heroCta.addEventListener('click', function() {
-            console.log('Hero CTA clicked');
-            const projectsSection = document.getElementById('projects');
-            if (projectsSection) {
-                const navbarHeight = navbar ? navbar.offsetHeight : 70;
-                const offsetTop = projectsSection.offsetTop - navbarHeight;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', function() {
-            console.log('Scroll indicator clicked');
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                const navbarHeight = navbar ? navbar.offsetHeight : 70;
-                const offsetTop = aboutSection.offsetTop - navbarHeight;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-
-    console.log('Scroll indicators initialized');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const goTo = id => {
+        const section = document.getElementById(id);
+        if (!section) return;
+        const top = section.getBoundingClientRect().top + window.scrollY - (navbar?.offsetHeight || 70);
+        window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
+    };
+    heroCta?.addEventListener('click', () => goTo('projects'));
+    scrollIndicator?.addEventListener('click', () => goTo('about'));
 }
 
 // Animate optional skill bars when present.
@@ -471,37 +388,24 @@ function openProjectModal(projectIndex, trigger) {
     if (!modal || !modalBody) return;
     const project = projectsData[projectIndex];
     if (!project) return;
-
     lastFocusedElement = trigger || document.activeElement;
     previousBodyOverflow = document.body.style.overflow;
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const demoLink = project.demoUrl
-        ? `<a href="${project.demoUrl}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir la démo <span aria-hidden="true">↗</span></a>`
-        : `<p class="project-demo-note">${project.demoStatus}</p>`;
-
-    modalBody.innerHTML = `
-        <div class="modal-project">
-            <div class="modal-project-image" aria-hidden="true">
-                <div class="modal-project-art"><span>${project.type}</span><strong>${project.title}</strong><small>${project.technologies.slice(0, 3).join(' · ')}</small></div>
-            </div>
-            <div class="modal-project-content">
-                <p class="modal-project-kicker">${project.type}</p>
-                <h2 id="modal-project-title">${project.title}</h2>
-                <p class="project-full-description">${project.fullDescription}</p>
-                <div class="project-technologies">
-                    <h4>Technologies</h4>
-                    <div class="tech-tags">${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}</div>
-                </div>
-                <div class="project-features">
-                    <h4>Ce que le projet met en pratique</h4>
-                    <ul>${project.features.map(feature => `<li>${feature}</li>`).join('')}</ul>
-                </div>
-                <div class="project-links">
-                    ${demoLink}
-                    <a href="${project.githubLink}" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le code <span aria-hidden="true">↗</span></a>
-                </div>
-            </div>
-        </div>`;
-
+        ? '<a href="' + escapeHtml(project.demoUrl) + '" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir la démo <span aria-hidden="true">↗</span></a>'
+        : '<p class="project-demo-note">' + escapeHtml(project.demoStatus) + '</p>';
+    const sourceLink = project.githubLink
+        ? '<a href="' + escapeHtml(project.githubLink) + '" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le code <span aria-hidden="true">↗</span></a>'
+        : '';
+    modalBody.innerHTML = [
+        '<div class="modal-project"><div class="modal-project-image" aria-hidden="true">',
+        '<div class="modal-project-art"><span>' + escapeHtml(project.type) + '</span><strong>' + escapeHtml(project.title) + '</strong><small>' + escapeHtml(project.technologies.slice(0, 3).join(' · ')) + '</small></div></div>',
+        '<div class="modal-project-content"><p class="modal-project-kicker">' + escapeHtml(project.type) + '</p>',
+        '<h2 id="modal-project-title">' + escapeHtml(project.title) + '</h2><p class="project-full-description">' + escapeHtml(project.fullDescription) + '</p>',
+        '<div class="project-technologies"><h4>Technologies</h4><div class="tech-tags">' + project.technologies.map(t => '<span class="tech-tag">' + escapeHtml(t) + '</span>').join('') + '</div></div>',
+        '<div class="project-features"><h4>Ce que le projet met en pratique</h4><ul>' + project.features.map(f => '<li>' + escapeHtml(f) + '</li>').join('') + '</ul></div>',
+        '<div class="project-links">' + demoLink + sourceLink + '</div></div></div>'
+    ].join('');
     addModalStyles();
     modal.classList.remove('hidden');
     modal.classList.add('show');
@@ -670,12 +574,10 @@ function initializeContactForm() {
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('Contact form submitted');
-        
+
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        console.log('Form data:', data);
-        
+
         // Validate form
         if (!validateForm(data)) {
             return;
@@ -696,7 +598,6 @@ function initializeContactForm() {
         }, 2000);
     });
 
-    console.log('Contact form initialized');
 }
 
 function validateForm(data) {
@@ -904,7 +805,6 @@ function addHoverEffects() {
         });
     });
 
-    console.log('Hover effects initialized');
 }
 
 
