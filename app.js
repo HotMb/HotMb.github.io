@@ -82,7 +82,7 @@ const projectsData = [
             "Données fictives clairement identifiées",
             "Prototype d’apprentissage, sans backend"
         ],
-        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/site/projects/nimbus",
+        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/projects/nimbus",
         "demoUrl": "",
         "demoStatus": "Prototype statique · code dans la branche de revue"
     },
