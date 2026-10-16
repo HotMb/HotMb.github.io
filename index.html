@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otmane Mabrouk - Développeur Web Full-Stack</title>
+    <meta name="description" content="Otmane Mabrouk, étudiant en Master 1 Ingénierie Web à Lille, recherche une alternance en développement web.">
+    <meta property="og:title" content="Otmane Mabrouk — Master Ingénierie Web, alternance">
+    <meta property="og:description" content="Étudiant en Master 1 Ingénierie Web, à la recherche d’une alternance en développement web en France.">
+    <title>Otmane Mabrouk — Master Ingénierie Web, alternance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#hero">Aller au contenu</a>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -30,11 +34,9 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
         </div>
     </nav>
 
@@ -49,11 +51,11 @@
                 <div class="avatar-ring"></div>
             </div>
             <h1 class="hero-name">
-                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-text" id="typing-text">Otmane Mabrouk</span>
                 <span class="cursor" id="cursor">|</span>
             </h1>
-            <p class="hero-title">Développeur Web Full-Stack</p>
-            <p class="hero-description">Passionné par la création d'applications web modernes et performantes. Actuellement à la recherche d'une alternance sur Lille.</p>
+            <p class="hero-title">Master 1 Ingénierie Web · alternance</p>
+            <p class="hero-description">Étudiant en Master 1 Ingénierie Web à Lille, je recherche une alternance pour contribuer à des projets web concrets, du frontend aux API.</p>
             <button class="btn btn--primary hero-cta" id="hero-cta">
                 <span>Voir mes projets</span>
                 <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -61,10 +63,10 @@
                 </svg>
             </button>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+        <button class="scroll-indicator" type="button" aria-label="Faire défiler vers la section À propos">
+            <span class="scroll-arrow" aria-hidden="true"></span>
             <span>Scroll</span>
-        </div>
+        </button>
     </section>
 
     <!-- About Section -->
@@ -73,31 +75,13 @@
             <h2 class="section-title animate-on-scroll">À propos de moi</h2>
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
-                    <p>Je suis un développeur web passionné, spécialisé dans la création d'applications modernes et performantes. Mon expertise s'étend du développement d'applications mobiles avec intelligence artificielle aux sites web pour restaurants et centres médicaux.</p>
-                    <p>Actuellement à la recherche d'une alternance, je suis prêt à apporter ma motivation et mes compétences techniques diversifiées à une équipe dynamique pour créer des solutions digitales innovantes.</p>
+                    <p>Étudiant en Master 1 Ingénierie Web, je construis des applications et des outils qui répondent à des besoins concrets : planification, interfaces web, mobile et automatisation de tâches de développement.</p>
+                    <p>Je recherche une alternance en développement web. Mes projets me font travailler sur la conception d’interfaces, les API, les règles métier, la validation des entrées et la mise en place de builds reproductibles.</p>
                 </div>
                 <div class="about-info animate-on-scroll">
-                    <div class="info-card">
-                        <div class="info-icon">📍</div>
-                        <div class="info-content">
-                            <h4>Localisation</h4>
-                            <p>Lille, France</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">💼</div>
-                        <div class="info-content">
-                            <h4>Disponibilité</h4>
-                            <p>Recherche d'alternance</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🌐</div>
-                        <div class="info-content">
-                            <h4>Langues</h4>
-                            <p>Français, Anglais, Arabe</p>
-                        </div>
-                    </div>
+                    <div class="info-card"><div class="info-icon">📍</div><div class="info-content"><h4>Zone</h4><p>France entière · hybride ou télétravail</p></div></div>
+                    <div class="info-card"><div class="info-icon">🎓</div><div class="info-content"><h4>Formation</h4><p>Master 1 Ingénierie Web · Lille</p></div></div>
+                    <div class="info-card"><div class="info-icon">💼</div><div class="info-content"><h4>Recherche</h4><p>Alternance en développement web</p></div></div>
                 </div>
             </div>
         </div>
@@ -106,127 +90,12 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Mes Compétences</h2>
+            <h2 class="section-title animate-on-scroll">Compétences mises en pratique</h2>
             <div class="skills-grid">
-                <div class="skill-category animate-on-scroll" data-delay="0">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Frontend</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>React</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>HTML5</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category animate-on-scroll" data-delay="200">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">⚙️</div>
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Express</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>PHP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll" data-delay="400">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">🗄️</div>
-                        <h3>Bases de données</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>PostgreSQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>MongoDB</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category animate-on-scroll" data-delay="600">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">🛠️</div>
-                        <h3>Outils & DevOps</h3>
-                    </div>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span>Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Eclipse IDE</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Docker</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="skill-category animate-on-scroll" data-delay="0"><div class="skill-category-header"><div class="skill-icon">🎨</div><h3>Frontend & mobile</h3></div><div class="skill-tags"><span>React</span><span>TypeScript</span><span>Next.js</span><span>React Native / Expo</span><span>HTML · CSS · JavaScript</span></div></div>
+                <div class="skill-category animate-on-scroll" data-delay="100"><div class="skill-category-header"><div class="skill-icon">⚙️</div><h3>Backend & API</h3></div><div class="skill-tags"><span>Node.js</span><span>Express</span><span>Python</span><span>Django REST</span><span>Flask</span><span>API REST</span></div></div>
+                <div class="skill-category animate-on-scroll" data-delay="200"><div class="skill-category-header"><div class="skill-icon">🗄️</div><h3>Données & sécurité</h3></div><div class="skill-tags"><span>MySQL</span><span>JWT</span><span>HMAC-SHA256</span><span>Validation métier</span></div></div>
+                <div class="skill-category animate-on-scroll" data-delay="300"><div class="skill-category-header"><div class="skill-icon">🛠️</div><h3>Outils & qualité</h3></div><div class="skill-tags"><span>Git · GitHub</span><span>GitHub Actions</span><span>Tests</span><span>CLI</span><span>MCP</span></div></div>
             </div>
         </div>
     </section>
@@ -234,172 +103,108 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Mes Projets</h2>
+            <div class="projects-heading animate-on-scroll">
+                <p class="section-eyebrow">PROJETS SÉLECTIONNÉS</p>
+                <h2 class="section-title">Des réalisations utiles<br>pour <em>le web d’aujourd’hui.</em></h2>
+                <p class="projects-intro">Une sélection courte entre projet de stage, interfaces web et API. Les visuels sont des aperçus illustratifs; les démos non publiées sont signalées.</p>
+            </div>
             <div class="projects-grid">
-                <!-- Jeu Mario Java -->
-                <div class="project-card animate-on-scroll" data-project="0">
-                    <div class="project-image">
-                        <img src="./public/img/Mario Java.png" alt="Jeu Mario Java" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">🎮 Jeu</span>
+                <article class="project-card animate-on-scroll" data-project-index="0">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-saoufi" aria-hidden="true"><span class="visual-label">GESTION DES RENDEZ-VOUS · INTERNE</span><div class="visual-calendar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-caption">planning · équipe · suivi</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Projet réalisé en stage</span>
+                            <h3>Gestion interne des rendez-vous — Centre Saoufi</h3>
+                            <p>Contribution à une application interne de gestion des rendez-vous pour un centre de rééducation.</p>
+                            <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Express</span><span class="tech-tag">Prisma</span><span class="tech-tag">PostgreSQL</span></div>
+                            <button class="project-open" type="button" data-project-index="0" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Jeu Mario - Java</h3>
-                        <p>Jeu de plateforme classique développé en Java</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-java">Java</span>
-                            <span class="tech-tag tech-ide">Eclipse IDE</span>
-                            <span class="tech-tag tech-ui">Java Swing</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><span class="project-repo project-repo--private">Application interne</span><span class="project-status">Application interne · code non public</span></div>
+                </article>
 
-                <!-- Chicken Crousty -->
-                <div class="project-card animate-on-scroll" data-project="1">
-                    <div class="project-image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1757887377/pplx_project_search_images/0794d804a26d0dd61b7b1d689d50c8c3fd93df92.png" alt="Chicken Crousty Restaurant" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">🍗 Restaurant</span>
+                <article class="project-card animate-on-scroll" data-project-index="1">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-guardian" aria-hidden="true"><span class="visual-label">OUTIL LOCAL · SAFE PLAN</span><span class="visual-orbit"></span><strong>G</strong><span class="visual-caption">fichiers · liens �� doublons</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Outil développeur</span>
+                            <h3>Guardian Autopilot</h3>
+                            <p>Un outil local qui inspecte un dépôt et prépare un plan de nettoyage contrôlé.</p>
+                            <div class="project-tech"><span class="tech-tag">Node.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Git</span><span class="tech-tag">MCP</span></div>
+                            <button class="project-open" type="button" data-project-index="1" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Chicken Crousty</h3>
-                        <p>Site web avec réservations et commandes en ligne</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-react">React</span>
-                            <span class="tech-tag tech-node">Node.js</span>
-                            <span class="tech-tag tech-payment">Stripe</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><a class="project-repo" href="https://github.com/HotMb/guardian-autopilot" target="_blank" rel="noopener noreferrer">Code sur GitHub <span aria-hidden="true">↗</span></a><span class="project-status">Outil local en bêta · pas de démo web publique</span></div>
+                </article>
 
-                <!-- Centre Kinésithérapie -->
-                <div class="project-card animate-on-scroll" data-project="2">
-                    <div class="project-image">
-                        <img src="./public/img/kinesaoufi.png" alt="Centre Kinésithérapie" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">🏥 Médical</span>
+                <article class="project-card animate-on-scroll" data-project-index="2">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-magensy" aria-hidden="true"><span class="visual-label">SITE VITRINE · EXPORT STATIQUE</span><div class="visual-browser"><span></span><span></span><span></span><b></b><i></i><i></i></div><span class="visual-caption">Next.js · TypeScript · Tailwind</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Site vitrine</span>
+                            <h3>Magensy</h3>
+                            <p>Un site de présentation d’entreprise construit avec Next.js, TypeScript et Tailwind CSS.</p>
+                            <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">GitHub Actions</span></div>
+                            <button class="project-open" type="button" data-project-index="2" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Centre Kinésithérapie</h3>
-                        <p>Plateforme de réservation de créneaux médicaux</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-php">PHP</span>
-                            <span class="tech-tag tech-mysql">MySQL</span>
-                            <span class="tech-tag tech-js">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><a class="project-repo" href="https://github.com/HotMb/Magensy" target="_blank" rel="noopener noreferrer">Code sur GitHub <span aria-hidden="true">↗</span></a><span class="project-status">Build validé · publication en attente</span></div>
+                </article>
 
-                <!-- Calculateur de Période -->
-                <div class="project-card animate-on-scroll" data-project="3">
-                    <div class="project-image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755074889/pplx_project_search_images/cf820f1701a0fed7c22471dad90e4979cdb056dd.png" alt="Calculateur de Période" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">💬 IA Santé</span>
+                <article class="project-card animate-on-scroll" data-project-index="3">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-nimbus" aria-hidden="true"><span class="visual-label">PROTOTYPE RESPONSIVE · TAILWIND CSS</span><div class="visual-dashboard"><i></i><i></i><i></i><b></b><span></span><span></span><span></span><span></span></div><span class="visual-caption">filtres · recherche · menu mobile</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Prototype d’interface · apprentissage Tailwind</span>
+                            <h3>Nimbus — tableau de bord</h3>
+                            <p>Un prototype responsive pour pratiquer Tailwind CSS et les filtres d’interface.</p>
+                            <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind CSS v4</span><span class="tech-tag">JavaScript</span></div>
+                            <button class="project-open" type="button" data-project-index="3" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Calculateur de Période + Chatbot</h3>
-                        <p>App santé féminine avec IA conversationnelle</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-react">React Native</span>
-                            <span class="tech-tag tech-python">Python</span>
-                            <span class="tech-tag tech-ai">TensorFlow</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><a class="project-repo" href="https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/projects/nimbus" target="_blank" rel="noopener noreferrer">Code sur GitHub <span aria-hidden="true">↗</span></a><span class="project-status">Prototype statique · code dans la branche de revue</span></div>
+                </article>
 
-                <!-- Portfolio React -->
-                <div class="project-card animate-on-scroll" data-project="4">
-                    <div class="project-image">
-                        <img src="./public/img/portfolio.png" alt="Portfolio React" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">🌐 Portfolio</span>
+                <article class="project-card animate-on-scroll" data-project-index="4">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-weather" aria-hidden="true"><span class="visual-label">MOBILE · EXPO</span><div class="visual-sun"></div><div class="visual-cloud"></div><strong>21°</strong><span class="visual-caption">recherche · météo · favoris</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Application mobile</span>
+                            <h3>Application météo</h3>
+                            <p>Une application Expo pour chercher une ville, consulter la météo et enregistrer des favoris.</p>
+                            <div class="project-tech"><span class="tech-tag">React Native</span><span class="tech-tag">Expo</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Open-Meteo</span></div>
+                            <button class="project-open" type="button" data-project-index="4" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Portfolio React Moderne</h3>
-                        <p>Site personnel avec animations avancées</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-react">React</span>
-                            <span class="tech-tag tech-animation">Framer Motion</span>
-                            <span class="tech-tag tech-css">CSS3</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><a class="project-repo" href="https://github.com/HotMb/meteo-app" target="_blank" rel="noopener noreferrer">Code sur GitHub <span aria-hidden="true">↗</span></a><span class="project-status">Export web validé · publication en attente de revue</span></div>
+                </article>
 
-                <!-- API REST -->
-                <div class="project-card animate-on-scroll" data-project="5">
-                    <div class="project-image">
-                        <img src="./public/img/API REST.png" alt="API REST" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">⚙️ Backend</span>
+                <article class="project-card animate-on-scroll" data-project-index="5">
+                    <div class="project-card-content">
+                        <div class="project-image project-visual visual-webhook" aria-hidden="true"><span class="visual-label">WEBHOOK · SIGNATURE</span><div class="visual-flow"><i>POST</i><b>→</b><i>HMAC</i><b>→</b><i>EVENT</i></div><span class="visual-caption">vérification · rejeu simulé</span></div>
+                        <div class="project-content">
+                            <span class="project-kind">Prototype backend</span>
+                            <h3>Webhook Payment</h3>
+                            <p>Un prototype Express qui vérifie une signature HMAC et simule les tentatives de rejeu.</p>
+                            <div class="project-tech"><span class="tech-tag">TypeScript</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">HMAC-SHA256</span></div>
+                            <button class="project-open" type="button" data-project-index="5" aria-haspopup="dialog">Détails du projet <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3>API REST Sécurisée</h3>
-                        <p>Backend robuste avec authentification JWT</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-node">Node.js</span>
-                            <span class="tech-tag tech-jwt">JWT</span>
-                            <span class="tech-tag tech-mongo">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- E-commerce Tatouages -->
-                <div class="project-card animate-on-scroll" data-project="6">
-                    <div class="project-image">
-                        <img src="./public/img/tattoodjoecom.png" alt="E-commerce Tatouages Éphémères" class="project-img">
-                        <div class="project-overlay">
-                            <span class="project-type">🛍️ E-commerce</span>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Tattoo Djo - E-commerce</h3>
-                        <p>Boutique en ligne moderne de tatouages éphémères</p>
-                        <div class="project-tech">
-                            <span class="tech-tag tech-react">React</span>
-                            <span class="tech-tag tech-vite">Vite</span>
-                            <span class="tech-tag tech-strapi">Strapi</span>
-                            <span class="tech-tag tech-animation">Framer Motion</span>
-                        </div>
-                    </div>
-                </div>
+                    <div class="project-actions"><a class="project-repo" href="https://github.com/HotMb/webhook-payment" target="_blank" rel="noopener noreferrer">Code sur GitHub <span aria-hidden="true">↗</span></a><span class="project-status">Prototype backend · démo locale uniquement</span></div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Contactez-moi</h2>
+            <h2 class="section-title animate-on-scroll">Parlons de votre équipe</h2>
             <div class="contact-content">
                 <div class="contact-info animate-on-scroll">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>otmanmabrouk01@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <p>+33 6 62 78 83 42</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Localisation</h4>
-                            <p>Lille, France</p>
-                        </div>
-                    </div>
+                    <p>Je recherche une alternance en développement web. Vous pouvez me joindre directement ou consulter mon code.</p>
+                    <div class="contact-item"><div class="contact-icon">📧</div><div><h4>Email</h4><p><a href="mailto:otmanmabrouk01@gmail.com">otmanmabrouk01@gmail.com</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon">⌘</div><div><h4>GitHub</h4><p><a href="https://github.com/HotMb" target="_blank" rel="noopener noreferrer">github.com/HotMb</a></p></div></div>
+                    <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Zone</h4><p>France entière · hybride ou télétravail</p></div></div>
                 </div>
             </div>
         </div>
@@ -408,21 +213,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Otmane Mabrouk. Tous droits réservés.</p>
+            <p>&copy; <span id="current-year">2026</span> Otmane Mabrouk</p>
         </div>
     </footer>
 
     <!-- Project Modal -->
-    <div class="modal hidden" id="project-modal">
+    <div class="modal hidden" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-project-title">
         <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close">&times;</button>
-            <div class="modal-body" id="modal-body">
-                <!-- Content will be dynamically inserted -->
-            </div>
+        <div class="modal-content" tabindex="-1">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Fermer les détails du projet">&times;</button>
+            <div class="modal-body" id="modal-body"></div>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
 </html>
+
+

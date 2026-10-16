@@ -1,144 +1,150 @@
-// Project data with all 6 projects
 const projectsData = [
     {
-        id: 1,
-        title: "Jeu Mario - Java",
-        shortDescription: "Jeu de plateforme classique développé en Java",
-        fullDescription: "Reproduction fidèle du jeu Mario Bros développée en Java avec Eclipse IDE. Le jeu comprend des niveaux multiples, un système de collision avancé, des animations fluides et une bande sonore nostalgique. Utilisation des concepts de programmation orientée objet pour la gestion des personnages, ennemis et éléments du jeu.",
-        technologies: ["Java", "Eclipse IDE", "Java Swing", "OOP"],
-        features: [
-            "Système de collision précis",
-            "Multiple niveaux jouables", 
-            "Animations de sprites fluides",
-            "Gestion des scores et vies",
-            "Effets sonores intégrés"
-        ],
-        image: "./public/img/Mario Java.png",
-        demoLink: "#",
-        githubLink: "https://github.com/HotMb/Mario-Bros.git"
-    },
-    {
-        id: 2,
-        title: "Chicken Crousty - Site Restaurant",
-        shortDescription: "Site web avec réservations et commandes en ligne",
-        fullDescription: "Site web complet pour le restaurant Chicken Crousty incluant un système de réservation de tables en ligne, commandes à emporter et à livrer, présentation du menu interactif et gestion des disponibilités en temps réel. Interface moderne et responsive optimisée pour mobile.",
-        technologies: ["React", "Node.js", "MongoDB", "Express"],
-        features: [
-            "Système de réservation en ligne",
-            "Menu interactif avec images",
-            "Gestion des disponibilités",
-            "Interface responsive mobile-first"
-        ],
-        image: "https://pplx-res.cloudinary.com/image/upload/v1757887377/pplx_project_search_images/0794d804a26d0dd61b7b1d689d50c8c3fd93df92.png",
-        demoLink: "#",
-        githubLink: "#"
-    },
-    {
-        id: 3,
-        title: "Centre Kinésithérapie - Réservations",
-        shortDescription: "Plateforme de réservation de créneaux médicaux",
-        fullDescription: "Application web pour centre de kinésithérapie permettant aux patients de réserver leurs séances en ligne. Système de gestion des plannings praticiens, notifications automatiques par email, historique des consultations et interface d'administration complète pour le personnel médical.",
-        technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
-        features: [
-            "Réservation de créneaux en temps réel",
-            "Gestion multi-praticiens",
-            "Notifications automatiques",
-            "Historique patient complet",
-            "Interface d'administration"
-        ],
-        image: "./public/img/kinesaoufi.png",
-        demoLink: "#",
-        githubLink: "#"
-    },
-    {
-        id: 4,
-        title: "Calculateur de Période + Chatbot",
-        shortDescription: "App santé féminine avec IA conversationnelle",
-        fullDescription: "Application de suivi menstruel avec calculateur de cycle intelligent et chatbot intégré pour conseils personnalisés. Algorithmes de prédiction basés sur l'historique, rappels personnalisés, conseils santé adaptatifs et interface conversationnelle naturelle pour répondre aux questions sur la santé féminine.",
-        technologies: ["React Native", "Python", "TensorFlow", "Dialogflow", "Firebase"],
-        features: [
-            "Prédiction intelligente des cycles",
-            "Chatbot IA pour conseils santé",
-            "Notifications personnalisées",
-            "Suivi des symptômes",
-            "Algorithmes d'apprentissage automatique"
-        ],
-        image: "https://pplx-res.cloudinary.com/image/upload/v1755074889/pplx_project_search_images/cf820f1701a0fed7c22471dad90e4979cdb056dd.png",
-        demoLink: "#",
-        githubLink: "#"
-    },
-    {
-        id: 5,
-        title: "Portfolio React Moderne",
-        shortDescription: "Site personnel avec animations avancées",
-        fullDescription: "Portfolio personnel développé avec React et Framer Motion, présentant mes compétences et projets avec des animations fluides et un design moderne. Le site est entièrement responsive et optimisé pour les performances avec des micro-interactions sophistiquées.",
-        technologies: ["React", "Framer Motion", "CSS3", "Vite"],
-        features: [
-            "Animations Framer Motion fluides",
-            "Design responsive moderne",
-            "Performance optimisée",
-            "Micro-interactions avancées",
-            "Navigation smooth scroll"
-        ],
-        image: "./public/img/portfolio.png",
-        demoLink: "hotmb.github.io",
-        githubLink: "#"
-    },
-    {
-        id: 6,
-        title: "API REST Sécurisée",
-        shortDescription: "Backend robuste avec authentification JWT",
-        fullDescription: "API REST complète construite avec Node.js et Express, incluant un système d'authentification sécurisé avec JWT, une base de données MongoDB et une documentation Swagger complète. Architecture scalable avec gestion d'erreurs robuste et tests automatisés.",
-        technologies: ["Node.js", "Express", "JWT", "MongoDB", "Swagger"],
-        features: [
-            "Authentification JWT sécurisée",
-            "API RESTful complète",
-            "Documentation Swagger automatisée",
-            "Tests unitaires intégrés",
-            "Architecture scalable"
-        ],
-        image: "./public/img/APIR appjs.png",
-        demoLink: "#",
-        githubLink: "https://github.com/HotMb/API-REST---DEMO.git"
-    },
-    {
-        id: 7,
-        title: "Tattoo Djo - E-commerce",
-        shortDescription: "Boutique en ligne moderne de tatouages éphémères",
-        fullDescription: "Site e-commerce spécialisé dans la vente de tatouages éphémères artistiques. La plateforme offre une expérience d'achat intuitive avec un catalogue de produits dynamique et un système de panier d'achat. Le frontend est construit avec React et Vite, enrichi d'animations fluides via Framer Motion. Le backend utilise Strapi CMS pour une gestion efficace du contenu et des produits en temps réel.",
-        technologies: [
+        "id": "centre-saoufi-rdv",
+        "title": "Gestion interne des rendez-vous — Centre Saoufi",
+        "type": "Projet réalisé en stage",
+        "shortDescription": "Contribution à une application interne de gestion des rendez-vous pour un centre de rééducation.",
+        "fullDescription": "Pendant mon stage au Centre Saoufi, j’ai contribué à une application interne destinée à organiser les rendez-vous et les tâches du personnel. Le projet s’appuie sur une interface React et une API Express avec Prisma et PostgreSQL. L’application reste privée et n’utilise aucune démonstration de données patients.",
+        "technologies": [
             "React",
-            "Vite",
-            "Strapi",
-            "Framer Motion",
+            "TypeScript",
+            "Express",
+            "Prisma",
+            "PostgreSQL"
+        ],
+        "features": [
+            "Contribution à une application métier utilisée en interne",
+            "Organisation de la gestion des rendez-vous",
+            "Interface web et API connectée à une base relationnelle",
+            "Code et données de démonstration non publics"
+        ],
+        "demoUrl": "",
+        "demoStatus": "Application interne · code non public"
+    },
+    {
+        "id": "guardian-autopilot",
+        "title": "Guardian Autopilot",
+        "type": "Outil développeur",
+        "shortDescription": "Un outil local qui inspecte un dépôt et prépare un plan de nettoyage contrôlé.",
+        "fullDescription": "Prototype local-first pour comprendre les fichiers d’un dépôt avant de les toucher : inventaire et empreintes SHA-256, détection de doublons, résolution des références entre fichiers, puis plan de nettoyage en lecture seule. Les essais d’automatisation se font dans un worktree Git isolé, avec vérifications requises.",
+        "technologies": [
             "Node.js",
-            "PostgreSQL",
-            "Styled Components",
-            "Redux Toolkit"
+            "TypeScript",
+            "Git",
+            "MCP"
         ],
-        features: [
-            "Interface utilisateur moderne et animée",
-            "Système de gestion de contenu avec Strapi",
-            "Catalogue de produits dynamique",
-            "Animations sophistiquées avec Framer Motion",
-            "Panier d'achat en temps réel",
-            "Interface administrateur personnalisée",
-            "Gestion des stocks et inventaire",
-            "Système de recherche et filtrage avancé"
+        "features": [
+            "Analyse des fichiers et de leurs références",
+            "Plan de nettoyage consultable avant action",
+            "Expérimentation dans un worktree isolé",
+            "Outil en bêta, sans démo web publique"
         ],
-        image: "./public/img/tattoodjoecom.png",
-        demoLink: "#",
-        githubLink: "#"
+        "githubLink": "https://github.com/HotMb/guardian-autopilot",
+        "demoUrl": "",
+        "demoStatus": "Outil local en bêta · pas de démo web publique"
+    },
+    {
+        "id": "magensy",
+        "title": "Magensy",
+        "type": "Site vitrine",
+        "shortDescription": "Un site de présentation d’entreprise construit avec Next.js, TypeScript et Tailwind CSS.",
+        "fullDescription": "Site de présentation des services de l’entreprise, construit avec Next.js, TypeScript et Tailwind CSS. Le build de production passe dans la branche de revue. Le déploiement public et le raccordement du formulaire restent à faire.",
+        "technologies": [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "GitHub Actions"
+        ],
+        "features": [
+            "Pages de présentation des services",
+            "Export statique préparé pour GitHub Pages",
+            "Build de production validé dans la branche de revue",
+            "Formulaire à connecter avant publication"
+        ],
+        "githubLink": "https://github.com/HotMb/Magensy",
+        "demoUrl": "",
+        "demoStatus": "Build validé · publication en attente"
+    },
+    {
+        "id": "nimbus",
+        "title": "Nimbus — tableau de bord",
+        "type": "Prototype d’interface · apprentissage Tailwind",
+        "shortDescription": "Un prototype responsive pour pratiquer Tailwind CSS et les filtres d’interface.",
+        "fullDescription": "Prototype statique créé pour commencer à pratiquer Tailwind CSS : mise en page responsive, menu mobile, recherche et filtres côté navigateur. Les projets, chiffres et pourcentages affichés sont fictifs. Aucun backend ni service externe n’est connecté.",
+        "technologies": [
+            "HTML",
+            "Tailwind CSS v4",
+            "JavaScript"
+        ],
+        "features": [
+            "Mise en page responsive avec les utilitaires Tailwind",
+            "Navigation mobile et filtres interactifs",
+            "Données fictives clairement identifiées",
+            "Prototype d’apprentissage, sans backend"
+        ],
+        "githubLink": "https://github.com/HotMb/HotMb.github.io/tree/codex/recruiter-portfolio-20261016/projects/nimbus",
+        "demoUrl": "",
+        "demoStatus": "Prototype statique · code dans la branche de revue"
+    },
+    {
+        "id": "meteo-app",
+        "title": "Application météo",
+        "type": "Application mobile",
+        "shortDescription": "Une application Expo pour chercher une ville, consulter la météo et enregistrer des favoris.",
+        "fullDescription": "Application React Native avec Expo et TypeScript. Elle utilise la géolocalisation, propose une recherche de villes avec suggestions et conserve les favoris sur l’appareil. L’export web a été validé dans une branche de revue, sans déploiement public actif.",
+        "technologies": [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "Open-Meteo"
+        ],
+        "features": [
+            "Météo selon la géolocalisation",
+            "Recherche de villes et suggestions",
+            "Favoris stockés sur l’appareil",
+            "Export web vérifié, publication à activer"
+        ],
+        "githubLink": "https://github.com/HotMb/meteo-app",
+        "demoUrl": "",
+        "demoStatus": "Export web validé · publication en attente de revue"
+    },
+    {
+        "id": "webhook-payment",
+        "title": "Webhook Payment",
+        "type": "Prototype backend",
+        "shortDescription": "Un prototype Express qui vérifie une signature HMAC et simule les tentatives de rejeu.",
+        "fullDescription": "Prototype TypeScript/Express qui vérifie la signature HMAC-SHA256 sur le corps brut d’une requête, compare les signatures de façon résistante aux attaques temporelles et simule les nouvelles tentatives. Les événements restent en mémoire : aucun prestataire de paiement ni stockage durable n’est connecté.",
+        "technologies": [
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "HMAC-SHA256"
+        ],
+        "features": [
+            "Validation de signature sur le corps brut",
+            "Comparaison résistante aux attaques temporelles",
+            "Simulation de tentatives et endpoint de comptage",
+            "Aucun prestataire ni stockage durable connecté"
+        ],
+        "githubLink": "https://github.com/HotMb/webhook-payment",
+        "demoUrl": "",
+        "demoStatus": "Prototype backend · démo locale uniquement"
     }
 ];
 
 // Global variables
 let navbar, hamburger, navMenu, typingText, cursor, heroCta, scrollIndicator;
 let projectCards, modal, modalOverlay, modalClose, modalBody;
+let lastFocusedElement = null;
+let previousBodyOverflow = '';
+
+document.documentElement.classList.add('has-js');
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing...');
+
+    const year = document.getElementById('current-year');
+    if (year) year.textContent = String(new Date().getFullYear());
     
     // Get DOM elements
     getDOMElements();
@@ -151,9 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSkillsBars();
     initializeProjects();
     initializeScrollIndicator();
-    addHoverEffects();
-    
-    console.log('All initialization complete');
+
 });
 
 // Get all DOM elements
@@ -170,388 +174,254 @@ function getDOMElements() {
     modalOverlay = document.getElementById('modal-overlay');
     modalClose = document.getElementById('modal-close');
     modalBody = document.getElementById('modal-body');
-    
-    console.log('DOM elements retrieved');
+
 }
 
-// Animation observer
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const delay = entry.target.dataset.delay || 0;
-            setTimeout(() => {
-                entry.target.classList.add('animate');
-            }, delay);
-        }
-    });
-}, observerOptions);
-
-// Initialize all animations
+// Keep the original scroll reveal while limiting fallback work to browsers without IntersectionObserver.
+let observer = null;
+let animationFrame = 0;
 function initializeAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-    animatedElements.forEach(el => observer.observe(el));
-    console.log('Animations initialized');
+    const elements = [...document.querySelectorAll('.animate-on-scroll')];
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        elements.forEach(element => element.classList.add('animate'));
+        return;
+    }
+    const pending = new Set(elements);
+    const reveal = element => {
+        if (!pending.delete(element)) return;
+        window.setTimeout(() => element.classList.add('animate'), Number(element.dataset.delay || 0));
+        observer?.unobserve(element);
+    };
+    if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (entry.isIntersecting) reveal(entry.target);
+        }), { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+        elements.forEach(element => observer.observe(element));
+        return;
+    }
+    const revealVisible = () => {
+        animationFrame = 0;
+        const height = window.innerHeight || document.documentElement.clientHeight;
+        [...pending].forEach(element => {
+            const bounds = element.getBoundingClientRect();
+            if (bounds.top < height * 0.92 && bounds.bottom > 24) reveal(element);
+        });
+    };
+    const schedule = () => { if (!animationFrame) animationFrame = window.requestAnimationFrame(revealVisible); };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    window.addEventListener('load', schedule, { once: true });
+    schedule();
+}
+
+function setMenuOpen(isOpen) {
+    if (!hamburger || !navMenu) return;
+    hamburger.classList.toggle('active', isOpen);
+    navMenu.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    hamburger.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function scrollToSection(section) {
+    if (!section) return;
+    const navbarHeight = navbar ? navbar.offsetHeight : 70;
+    window.scrollTo({
+        top: section.getBoundingClientRect().top + window.scrollY - navbarHeight,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+    });
 }
 
 // Navigation functionality
 function initializeNavigation() {
-    if (!hamburger || !navMenu) {
-        console.error('Navigation elements not found');
-        return;
-    }
+    if (!hamburger || !navMenu) return;
 
-    // Hamburger toggle
-    hamburger.addEventListener('click', function() {
-        console.log('Hamburger clicked');
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-    });
-
-    // Navigation links functionality
     const navLinks = document.querySelectorAll('.nav-link');
-    console.log('Found nav links:', navLinks.length);
-    
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Nav link clicked:', link.getAttribute('href'));
-            
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const navbarHeight = navbar ? navbar.offsetHeight : 70;
-                const offsetTop = targetSection.offsetTop - navbarHeight;
-                console.log('Scrolling to:', offsetTop);
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+    hamburger.addEventListener('click', () => {
+        setMenuOpen(hamburger.getAttribute('aria-expanded') !== 'true');
+    });
 
-                // Close mobile menu
-                if (hamburger) hamburger.classList.remove('active');
-                if (navMenu) navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-
-                // Update active link
-                navLinks.forEach(function(l) {
-                    l.classList.remove('active');
-                });
-                link.classList.add('active');
-            } else {
-                console.error('Target section not found:', targetId);
-            }
+    navLinks.forEach(link => {
+        link.addEventListener('click', event => {
+            const href = link.getAttribute('href') || '';
+            if (!href.startsWith('#')) return;
+            const section = document.querySelector(href);
+            if (!section) return;
+            event.preventDefault();
+            scrollToSection(section);
+            setMenuOpen(false);
         });
     });
 
-    // Scroll spy for navigation
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section');
-        const scrollPos = window.scrollY + 100;
-
-        sections.forEach(function(section) {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(function(link) {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-
-        // Navbar background on scroll
-        if (navbar) {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') {
+            setMenuOpen(false);
+            hamburger.focus();
         }
     });
 
-    console.log('Navigation initialized');
+    const updateNavigation = () => {
+        const scrollPos = window.scrollY + (navbar ? navbar.offsetHeight : 70) + 30;
+        document.querySelectorAll('section[id]').forEach(section => {
+            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+                navLinks.forEach(link => {
+                    const active = link.getAttribute('href') === '#' + section.id;
+                    link.classList.toggle('active', active);
+                    if (active) link.setAttribute('aria-current', 'location');
+                    else link.removeAttribute('aria-current');
+                });
+            }
+        });
+        navbar?.classList.toggle('scrolled', window.scrollY > 50);
+    };
+    window.addEventListener('scroll', updateNavigation, { passive: true });
+    updateNavigation();
 }
 
-// Typing effect for hero section
+// Original typing animation, with a static fallback for reduced-motion preferences.
 function initializeTypingEffect() {
-    if (!typingText || !cursor) {
-        console.error('Typing elements not found');
+    if (!typingText || !cursor) return;
+    const name = 'Otmane Mabrouk';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typingText.textContent = name;
+        cursor.hidden = true;
         return;
     }
-
-    const text = 'Otmane Mabrouk';
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            typingText.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 150);
-        } else {
-            // Hide cursor after typing is complete
-            setTimeout(function() {
-                cursor.style.display = 'none';
-            }, 1000);
-        }
-    }
-
-    // Start typing effect after page load
-    setTimeout(typeWriter, 1000);
-    console.log('Typing effect initialized');
+    let index = 0;
+    typingText.textContent = '';
+    const typeNext = () => {
+        if (index < name.length) {
+            typingText.textContent += name.charAt(index++);
+            window.setTimeout(typeNext, 115);
+        } else window.setTimeout(() => { cursor.hidden = true; }, 700);
+    };
+    window.setTimeout(typeNext, 350);
 }
 
-// Scroll effects
+// Keep the original hero parallax, throttled to one animation frame.
 function initializeScrollEffects() {
-    // Parallax effect for hero background
+    const background = document.querySelector('.hero-background');
+    if (!background || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let ticking = false;
-    
-    function updateParallax() {
-        const scrolled = window.pageYOffset;
-        const heroBackground = document.querySelector('.hero-background');
-        if (heroBackground) {
-            heroBackground.style.transform = `translateY(${scrolled * 0.3}px)`;
-        }
+    const update = () => {
+        if (window.scrollY < window.innerHeight) background.style.transform = 'translate3d(0,' + (window.scrollY * 0.22) + 'px,0)';
         ticking = false;
-    }
-
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            requestAnimationFrame(updateParallax);
-            ticking = true;
-        }
-    });
-
-    console.log('Scroll effects initialized');
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
 }
 
-// Hero CTA and scroll indicator functionality
+// Hero CTA and scroll indicator functionality.
 function initializeScrollIndicator() {
-    if (heroCta) {
-        heroCta.addEventListener('click', function() {
-            console.log('Hero CTA clicked');
-            const projectsSection = document.getElementById('projects');
-            if (projectsSection) {
-                const navbarHeight = navbar ? navbar.offsetHeight : 70;
-                const offsetTop = projectsSection.offsetTop - navbarHeight;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', function() {
-            console.log('Scroll indicator clicked');
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                const navbarHeight = navbar ? navbar.offsetHeight : 70;
-                const offsetTop = aboutSection.offsetTop - navbarHeight;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    }
-
-    console.log('Scroll indicators initialized');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const goTo = id => {
+        const section = document.getElementById(id);
+        if (!section) return;
+        const top = section.getBoundingClientRect().top + window.scrollY - (navbar?.offsetHeight || 70);
+        window.scrollTo({ top, behavior: reducedMotion ? 'auto' : 'smooth' });
+    };
+    heroCta?.addEventListener('click', () => goTo('projects'));
+    scrollIndicator?.addEventListener('click', () => goTo('about'));
 }
 
-// Skills bars animation
+// Animate optional skill bars when present.
 function initializeSkillsBars() {
-    const skillsObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+    const section = document.getElementById('skills');
+    const bars = section?.querySelectorAll('.skill-progress');
+    if (!bars?.length) return;
+    const fill = () => bars.forEach(bar => { bar.style.width = (bar.dataset.progress || '0') + '%'; });
+    if (!('IntersectionObserver' in window)) {
+        fill();
+        return;
+    }
+    const skillsObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach(function(bar) {
-                    const progress = bar.dataset.progress;
-                    setTimeout(function() {
-                        bar.style.width = progress + '%';
-                    }, 500);
-                });
+                window.setTimeout(fill, 250);
+                skillsObserver.disconnect();
             }
         });
-    }, { threshold: 0.5 });
-
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        skillsObserver.observe(skillsSection);
-        console.log('Skills bars initialized');
-    }
+    }, { threshold: 0.35 });
+    skillsObserver.observe(section);
 }
 
-// Projects functionality
+// Project details dialog
 function initializeProjects() {
-    console.log('Initializing projects, found cards:', projectCards.length);
-    
-    projectCards.forEach(function(card, index) {
-        // Set the correct project index as data attribute
-        card.setAttribute('data-project-index', index);
-        
-        card.addEventListener('click', function() {
-            const projectIndex = parseInt(this.getAttribute('data-project-index'));
-            console.log('Project card clicked, index:', projectIndex);
-            openProjectModal(projectIndex);
-        });
-
-        // Add hover animations
-        card.addEventListener('mouseenter', function() {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
-            card.style.transition = 'all 0.3s ease';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            card.style.transform = 'translateY(0) scale(1)';
-        });
+    projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        const button = card.querySelector('.project-open');
+        const index = Number(button?.dataset.projectIndex ?? card.dataset.projectIndex);
+        button?.addEventListener('click', () => openProjectModal(index, button));
     });
 
-    // Modal close events
-    if (modalClose) {
-        modalClose.addEventListener('click', closeProjectModal);
-    }
-    
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', closeProjectModal);
-    }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+    modalClose?.addEventListener('click', closeProjectModal);
+    modalOverlay?.addEventListener('click', closeProjectModal);
+    document.addEventListener('keydown', event => {
+        if (!modal?.classList.contains('show')) return;
+        if (event.key === 'Escape') {
+            event.preventDefault();
             closeProjectModal();
+            return;
+        }
+        if (event.key !== 'Tab') return;
+        const focusable = [...modal.querySelectorAll('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])')]
+            .filter(element => !element.hidden);
+        if (!focusable.length) {
+            event.preventDefault();
+            modalClose?.focus();
+            return;
+        }
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
         }
     });
-
-    console.log('Projects initialized');
 }
 
-function openProjectModal(projectIndex) {
-    if (!modal || !modalBody) {
-        console.error('Modal elements not found');
-        return;
-    }
-
-    // Ensure projectIndex is valid
-    if (projectIndex < 0 || projectIndex >= projectsData.length) {
-        console.error('Invalid project index:', projectIndex);
-        return;
-    }
-
+function openProjectModal(projectIndex, trigger) {
+    if (!modal || !modalBody) return;
     const project = projectsData[projectIndex];
-    console.log('Opening modal for project:', project.title);
-    
-    modalBody.innerHTML = `
-        <div class="modal-project">
-            <div class="modal-project-image">
-                <img src="${project.image}" alt="${project.title}" class="modal-project-img">
-                <div class="project-overlay-large">
-                    <span class="project-type-large">${getProjectTypeIcon(projectIndex)}</span>
-                </div>
-            </div>
-            <div class="modal-project-content">
-                <h2>${project.title}</h2>
-                <p class="project-full-description">${project.fullDescription}</p>
-                
-                <div class="project-technologies">
-                    <h4>Technologies utilisées :</h4>
-                    <div class="tech-tags">
-                        ${project.technologies.map(tech => `<span class="tech-tag ${getTechClass(tech)}">${tech}</span>`).join('')}
-                    </div>
-                </div>
-                
-                <div class="project-features">
-                    <h4>Fonctionnalités principales :</h4>
-                    <ul>
-                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
-                    </ul>
-                </div>
-                
-                <div class="project-links">
-                    <a href="${project.demoLink}" target="_blank" class="btn btn--primary">
-                        <span>Voir la démo</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                            <polyline points="15,3 21,3 21,9"/>
-                            <line x1="10" y1="14" x2="21" y2="3"/>
-                        </svg>
-                    </a>
-                    <a href="${project.githubLink}" target="_blank" class="btn btn--outline">
-                        <span>Code source</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    `;
-
-    // Add modal-specific styles
+    if (!project) return;
+    lastFocusedElement = trigger || document.activeElement;
+    previousBodyOverflow = document.body.style.overflow;
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const demoLink = project.demoUrl
+        ? '<a href="' + escapeHtml(project.demoUrl) + '" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir la démo <span aria-hidden="true">↗</span></a>'
+        : '<p class="project-demo-note">' + escapeHtml(project.demoStatus) + '</p>';
+    const sourceLink = project.githubLink
+        ? '<a href="' + escapeHtml(project.githubLink) + '" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le code <span aria-hidden="true">↗</span></a>'
+        : '';
+    modalBody.innerHTML = [
+        '<div class="modal-project"><div class="modal-project-image" aria-hidden="true">',
+        '<div class="modal-project-art"><span>' + escapeHtml(project.type) + '</span><strong>' + escapeHtml(project.title) + '</strong><small>' + escapeHtml(project.technologies.slice(0, 3).join(' · ')) + '</small></div></div>',
+        '<div class="modal-project-content"><p class="modal-project-kicker">' + escapeHtml(project.type) + '</p>',
+        '<h2 id="modal-project-title">' + escapeHtml(project.title) + '</h2><p class="project-full-description">' + escapeHtml(project.fullDescription) + '</p>',
+        '<div class="project-technologies"><h4>Technologies</h4><div class="tech-tags">' + project.technologies.map(t => '<span class="tech-tag">' + escapeHtml(t) + '</span>').join('') + '</div></div>',
+        '<div class="project-features"><h4>Ce que le projet met en pratique</h4><ul>' + project.features.map(f => '<li>' + escapeHtml(f) + '</li>').join('') + '</ul></div>',
+        '<div class="project-links">' + demoLink + sourceLink + '</div></div></div>'
+    ].join('');
     addModalStyles();
-
     modal.classList.remove('hidden');
     modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-}
-
-function getProjectTypeIcon(index) {
-    const icons = [
-        '🎮 Jeu', '🍗 Restaurant', '🏥 Médical', 
-        '💬 IA Santé', '🌐 Portfolio', '⚙️ Backend'
-    ];
-    return icons[index] || '🔧 Projet';
-}
-
-function getTechClass(tech) {
-    const techClasses = {
-        'Java': 'tech-java',
-        'React': 'tech-react',
-        'Node.js': 'tech-node',
-        'PHP': 'tech-php',
-        'Python': 'tech-python',
-        'MySQL': 'tech-mysql',
-        'MongoDB': 'tech-mongodb',
-        'JWT': 'tech-jwt',
-        'Stripe': 'tech-stripe',
-        'TensorFlow': 'tech-ai',
-        'Eclipse IDE': 'tech-ide',
-        'JavaScript': 'tech-js',
-        'CSS3': 'tech-css',
-        'Framer Motion': 'tech-animation',
-        'Java Swing': 'tech-ui',
-        'Bootstrap': 'tech-css',
-        'Express': 'tech-node',
-        'React Native': 'tech-react',
-        'Dialogflow': 'tech-ai',
-        'Firebase': 'tech-ai',
-        'API SMS': 'tech-js',
-        'Swagger': 'tech-node',
-        'Vite': 'tech-js',
-        'OOP': 'tech-java'
-    };
-    return techClasses[tech] || 'tech-tag';
+    modalClose?.focus();
 }
 
 function closeProjectModal() {
-    if (modal) {
-        modal.classList.remove('show');
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-        console.log('Modal closed');
-    }
+    if (!modal) return;
+    modal.classList.remove('show');
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = previousBodyOverflow;
+    lastFocusedElement?.focus?.();
+    lastFocusedElement = null;
 }
 
 function addModalStyles() {
@@ -704,12 +574,10 @@ function initializeContactForm() {
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('Contact form submitted');
-        
+
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData);
-        console.log('Form data:', data);
-        
+
         // Validate form
         if (!validateForm(data)) {
             return;
@@ -730,7 +598,6 @@ function initializeContactForm() {
         }, 2000);
     });
 
-    console.log('Contact form initialized');
 }
 
 function validateForm(data) {
@@ -938,28 +805,6 @@ function addHoverEffects() {
         });
     });
 
-    console.log('Hover effects initialized');
 }
 
-// Page load animation
-window.addEventListener('load', function() {
-    document.body.style.opacity = '1';
-    console.log('Page fully loaded');
-});
 
-// Add initial page styles
-document.addEventListener('DOMContentLoaded', function() {
-    const pageStyles = `
-        body {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-    `;
-    
-    if (!document.getElementById('page-styles')) {
-        const styleSheet = document.createElement('style');
-        styleSheet.id = 'page-styles';
-        styleSheet.textContent = pageStyles;
-        document.head.appendChild(styleSheet);
-    }
-});

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prototype d'interface responsive créé pour apprendre Tailwind CSS. Données fictives, sans backend.">
+  <meta name="theme-color" content="#0f172a">
+  <title>Nimbus — prototype Tailwind CSS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :focus-visible { outline: 3px solid #38bdf8; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 font-sans text-slate-900 antialiased">
+  <div class="min-h-screen lg:grid lg:grid-cols-[248px_minmax(0,1fr)]">
+    <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 flex w-[min(84vw,280px)] -translate-x-full flex-col bg-slate-950 px-5 py-6 text-white transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:w-auto lg:translate-x-0" aria-label="Navigation principale">
+      <a class="flex items-center gap-3 rounded-xl font-semibold tracking-tight" href="#accueil" aria-label="Nimbus, accueil">
+        <span class="grid size-10 place-items-center rounded-xl bg-sky-400 text-lg font-black text-slate-950">N</span>
+        <span class="text-xl">nimbus<span class="text-sky-400">.</span></span>
+      </a>
+      <p class="mt-10 px-3 text-xs font-semibold uppercase tracking-[.18em] text-slate-500">Espace personnel</p>
+      <nav class="mt-3 grid gap-1 text-sm">
+        <a class="flex items-center gap-3 rounded-xl bg-white/10 px-3 py-3 font-medium text-white" href="#accueil"><span aria-hidden="true">◫</span> Vue d'ensemble</a>
+        <a class="flex items-center gap-3 rounded-xl px-3 py-3 text-slate-400 transition-colors hover:bg-white/5 hover:text-white" href="#projets"><span aria-hidden="true">▧</span> Mes projets</a>
+        <a class="flex items-center gap-3 rounded-xl px-3 py-3 text-slate-400 transition-colors hover:bg-white/5 hover:text-white" href="#projets"><span aria-hidden="true">✓</span> Tâches</a>
+      </nav>
+      <div class="mt-auto rounded-2xl border border-white/10 bg-white/5 p-4">
+        <p class="text-sm font-medium">Prototype d'apprentissage</p>
+        <p class="mt-1 text-xs leading-5 text-slate-400">Interface Tailwind CSS avec données fictives. Aucun compte ni service connecté.</p>
+      </div>
+    </aside>
+
+    <div id="scrim" class="fixed inset-0 z-30 hidden bg-slate-950/50 lg:hidden" aria-hidden="true"></div>
+    <main id="accueil" class="min-w-0 px-4 pb-10 sm:px-7 lg:px-10">
+      <header class="flex min-h-[76px] items-center justify-between border-b border-slate-200">
+        <button id="menu-toggle" class="grid size-10 place-items-center rounded-xl border border-slate-200 bg-white text-lg lg:hidden" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <div class="hidden text-sm text-slate-500 sm:block">Espace de travail <span class="mx-2 text-slate-300">/</span> Vue d'ensemble</div>
+        <span class="ml-auto rounded-full border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-semibold text-sky-800">Démo · données fictives</span>
+      </header>
+
+      <section class="mx-auto max-w-6xl pt-9 sm:pt-12">
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm font-semibold text-sky-700">PROTOTYPE D’APPRENTISSAGE</p>
+            <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Une vue claire de vos projets.</h1>
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">Une maquette responsive pour organiser les priorités et suivre l'avancement au même endroit.</p>
+          </div>
+          <a href="#projets" class="inline-flex w-fit items-center gap-2 rounded-xl bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800">Explorer les projets <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Projets suivis</p><p id="project-count" class="mt-3 text-3xl font-bold tracking-tight">—</p><p class="mt-2 text-xs text-slate-400">Dans cette maquette</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Projets actifs</p><p id="active-count" class="mt-3 text-3xl font-bold tracking-tight">—</p><p class="mt-2 text-xs text-slate-400">Données de démonstration</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <p class="text-sm text-slate-500">Avancement moyen</p><p id="average-progress" class="mt-3 text-3xl font-bold tracking-tight">—</p><p class="mt-2 text-xs text-slate-400">Calculé à partir des projets affichés</p>
+          </article>
+        </div>
+
+        <section id="projets" class="mt-11">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div><h2 class="text-xl font-bold tracking-tight text-slate-950">Projets récents</h2><p class="mt-1 text-sm text-slate-500">Recherche et filtres fonctionnent localement dans le navigateur.</p></div>
+            <label class="block w-full sm:max-w-xs"><span class="sr-only">Rechercher un projet</span><input id="search" class="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm placeholder:text-slate-400" type="search" placeholder="Rechercher un projet…"></label>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-2" role="group" aria-label="Filtrer les projets">
+            <button class="filter rounded-full bg-slate-950 px-4 py-2 text-sm font-medium text-white" type="button" data-filter="all" aria-pressed="true">Tous</button>
+            <button class="filter rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-400" type="button" data-filter="active" aria-pressed="false">En cours</button>
+            <button class="filter rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-600 transition hover:border-slate-400" type="button" data-filter="done" aria-pressed="false">Terminés</button>
+          </div>
+          <p id="results" class="mt-4 text-xs text-slate-500" aria-live="polite"></p>
+          <div id="project-list" class="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="project rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md" data-status="active" data-name="portfolio otmane">
+              <div class="flex items-start justify-between gap-3"><span class="grid size-11 place-items-center rounded-xl bg-violet-100 text-lg text-violet-700" aria-hidden="true">✦</span><span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-800">En cours</span></div>
+              <h3 class="mt-5 font-semibold">Portfolio étudiant</h3><p class="mt-2 text-sm leading-6 text-slate-500">Refonte de la vitrine et sélection des projets.</p>
+              <div class="mt-5 flex items-center justify-between text-xs text-slate-500"><span>Interface web</span><span>65 %</span></div><div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-[65%] rounded-full bg-violet-500"></div></div>
+            </article>
+            <article class="project rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md" data-status="active" data-name="dashboard tailwind nimbus">
+              <div class="flex items-start justify-between gap-3"><span class="grid size-11 place-items-center rounded-xl bg-sky-100 text-lg text-sky-700" aria-hidden="true">☁</span><span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-800">En cours</span></div>
+              <h3 class="mt-5 font-semibold">Dashboard Nimbus</h3><p class="mt-2 text-sm leading-6 text-slate-500">Maquette d'apprentissage avec utilitaires Tailwind CSS.</p>
+              <div class="mt-5 flex items-center justify-between text-xs text-slate-500"><span>Prototype frontend</span><span>40 %</span></div><div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-[40%] rounded-full bg-sky-500"></div></div>
+            </article>
+            <article class="project rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md" data-status="done" data-name="application meteo">
+              <div class="flex items-start justify-between gap-3"><span class="grid size-11 place-items-center rounded-xl bg-emerald-100 text-lg text-emerald-700" aria-hidden="true">☀</span><span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-800">Terminé</span></div>
+              <h3 class="mt-5 font-semibold">Application météo</h3><p class="mt-2 text-sm leading-6 text-slate-500">Recherche de villes, météo locale et favoris.</p>
+              <div class="mt-5 flex items-center justify-between text-xs text-slate-500"><span>React Native · Expo</span><span>100 %</span></div><div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-100"><div class="h-full w-full rounded-full bg-emerald-500"></div></div>
+            </article>
+          </div>
+          <p id="empty-state" class="mt-6 hidden rounded-xl border border-dashed border-slate-300 p-6 text-center text-sm text-slate-500">Aucun projet ne correspond à cette recherche.</p>
+        </section>
+        <footer class="mt-12 border-t border-slate-200 pt-5 text-xs leading-5 text-slate-500">Nimbus est un prototype statique d'apprentissage. Les projets, chiffres et pourcentages sont fictifs; aucune donnée n'est enregistrée.</footer>
+      </section>
+    </main>
+  </div>
+  <script>
+    const menu = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const scrim = document.getElementById('scrim');
+    const closeMenu = () => { sidebar.classList.add('-translate-x-full'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Ouvrir le menu'); scrim.classList.add('hidden'); };
+    menu.addEventListener('click', () => { const isOpen = menu.getAttribute('aria-expanded') !== 'true'; sidebar.classList.toggle('-translate-x-full', !isOpen); menu.setAttribute('aria-expanded', String(isOpen)); menu.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu'); scrim.classList.toggle('hidden', !isOpen); });
+    scrim.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+
+    const cards = [...document.querySelectorAll('.project')];
+    const search = document.getElementById('search');
+    const filters = [...document.querySelectorAll('.filter')];
+    const results = document.getElementById('results');
+    let activeFilter = 'all';
+    const updateProjects = () => {
+      const query = search.value.trim().toLocaleLowerCase('fr');
+      let visible = 0;
+      let activeProjects = 0;
+      let progress = 0;
+      cards.forEach(card => {
+        const matches = card.dataset.name.includes(query) && (activeFilter === 'all' || card.dataset.status === activeFilter);
+        card.hidden = !matches;
+        if (matches) { visible++; progress += Number(card.querySelector('.mt-5 span:last-child')?.textContent.replace('%', '') || 0); if (card.dataset.status === 'active') activeProjects++; }
+      });
+      document.getElementById('project-count').textContent = String(visible).padStart(2, '0');
+      document.getElementById('active-count').textContent = String(activeProjects).padStart(2, '0');
+      document.getElementById('average-progress').textContent = visible ? `${Math.round(progress / visible)}%` : '—';
+      results.textContent = `${visible} projet${visible > 1 ? 's' : ''} affiché${visible > 1 ? 's' : ''}`;
+      document.getElementById('empty-state').classList.toggle('hidden', visible > 0);
+    };
+    filters.forEach(button => button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter;
+      filters.forEach(filter => { const selected = filter === button; filter.setAttribute('aria-pressed', String(selected)); filter.classList.toggle('bg-slate-950', selected); filter.classList.toggle('text-white', selected); filter.classList.toggle('border', !selected); filter.classList.toggle('border-slate-200', !selected); filter.classList.toggle('bg-white', !selected); filter.classList.toggle('text-slate-600', !selected); });
+      updateProjects();
+    }));
+    search.addEventListener('input', updateProjects);
+    updateProjects();
+  </script>
+</body>
+</html>
+
