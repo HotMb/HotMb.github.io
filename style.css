@@ -1913,11 +1913,6 @@ section {
 }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after {
-        animation-duration: .01ms !important; animation-delay: 0ms !important;
-        animation-iteration-count: 1 !important; transition-duration: .01ms !important;
-    }
-    html.has-js .animate-on-scroll,
-    html.has-js .animate-on-scroll.animate { opacity: 1; transform: none; }
+    html.has-js .animate-on-scroll { transform: translateY(12px); transition-duration: .45s; }
 }
 
